@@ -6,9 +6,9 @@ const Content = () => {
    return (
       <>
          <div className='col-span-7'>
-            <div className='w-full pt-47px pr-55px pl-61px pb-151px rounded-20px shadow-Content'>
+            <div className='w-full  pr-16 pl-72px pb-151px rounded-20px shadow-Content'>
 
-               <section className=''>
+               <section id='information' className='pt-72px'>
                   <h3 className='text-28px font-medium text-primary'><span className='text-secondary'>Study in Canada</span> for Bangladeshi Students</h3>
                   <p className='text-base leading-7 tracking-custom text-studyPagePtag opacity-80 mt-5'>To <span className='font-semibold'>study in Canada</span> is an excellent opportunity for students who desire a global education with international accreditation. Canada is a dynamic and diverse country renowned for its top-notch education system. Situated in North America, Canada presents international students with a unique chance to explore a nation that embodies contemporary modern culture while showcasing breathtaking scenery. The country stands as the second-largest nation <span className='font-semibold'>globaly</span> with ten provinces and three territories. Each exhibits distinct cultural identities and captivating attractions. From its vibrant metropolitan cities like Toronto, Montreal and Vancouver to enchanting coastal towns and picturesque mountain ranges, the country presents diverse experiences for students.<br />
                      The country’s unique education system is the primary reason for international students to choose Canada. <span className='font-semibold'>Its universities and colleges are renowned for their academic excellence, innovative research endeavors and unwavering commitment to high-quality education.</span> Whether one seeks a degree in engineering, arts, business, or any other field, Canadian institutions offer an extensive range of programs tailored to individual interests and career aspirations.<br />
@@ -58,7 +58,7 @@ const Content = () => {
 
                   <h4 className='text-base leading-7 tracking-custom text-studyPagePtag opacity-80'><span className='font-semibold'>English language proficiency: </span>Studying in Canada provides an excellent opportunity to improve English language skills, which is essential for future career prospects.</h4>
 
-                  <h5 className='font-semibold text-base leading-7 tracking-custom text-studyPagePtag opacity-80 mt-4 mb-7 w-10/12 text-center mx-auto'>Do you find Canada to be even more impressive than expected? If so, you can make your dream of studying in Canada a reality by contacting AECC today.Want to study in Canada? Get FREE counselling</h5>
+                  <h5 className='font-semibold text-base leading-7 tracking-custom text-studyPagePtag opacity-80 mt-5 mb-8 w-10/12 text-center mx-auto'>Do you find Canada to be even more impressive than expected? If so, you can make your dream of studying in Canada a reality by contacting AECC today.Want to study in Canada? Get FREE counselling</h5>
 
                   <div className='flex justify-center'>
                      <MyButton>Want to study in canada? Get Free counselling</MyButton>
@@ -66,8 +66,8 @@ const Content = () => {
 
                </section>
 
-               <section className=''>
-                  <h3 className='text-28px font-medium text-primary mt-11 mb-7'>What are the <span className='text-secondary'>Popular Courses</span> in Canada?</h3>
+               <section id='courses' className='pt-72px'>
+                  <h3 className='text-28px font-medium text-primary mb-7'>What are the <span className='text-secondary'>Popular Courses</span> in Canada?</h3>
 
                   <div className='text-base leading-7 tracking-custom text-studyPagePtag opacity-80'>
                      <p className=''>Canada is renowned for its exceptional education system, which offers diverse courses and degrees. These educational programs are structured into three main levels: <span className='font-semibold'>Under-graduation, Graduation and </span><span className='font-semibold text-secondary'>Post Graduation</span></p>
@@ -86,12 +86,12 @@ const Content = () => {
                         <li className=''>Health, Biosciences and Pharmacy</li>
                         <li className=''>Media & Journalism</li>
                      </ul>
-                     <p className='my-6'>The cost of studying popular courses in Canada for international students is generally higher than that for domestic students. International students are often required to pay higher tuition fees to study in Canada. The specific tuition fees can vary depending on the university, program, and level of study.</p>
+                     <p className=''>The cost of studying popular courses in Canada for international students is generally higher than that for domestic students. International students are often required to pay higher tuition fees to study in Canada. The specific tuition fees can vary depending on the university, program, and level of study.</p>
 
                   </div>
                </section>
 
-               <section className=''>
+               <section id='cost' className='pt-10'>
                   <div className='text-base'>
                      <h5 className='font-medium text-studyPagePtag'>Here are some approximate annual tuition fee ranges for international students:</h5>
 
@@ -106,14 +106,14 @@ const Content = () => {
                         </div>
                      </div>
 
-                     <h5 className='font-semibold text-studyPagePtag opacity-80 mb-7'>If you're beginning to perceive Canada as a comparatively more affordable option than other countries, seek guidance from our expert AECC counsellors to start your study-abroad journey today.</h5>
+                     <h5 className='font-semibold text-studyPagePtag opacity-80 mb-9'>If you're beginning to perceive Canada as a comparatively more affordable option than other countries, seek guidance from our expert AECC counsellors to start your study-abroad journey today.</h5>
                   </div>
                   <div className='flex justify-center'>
                      <MyButton>Contact AECC</MyButton>
                   </div>
                </section>
 
-               <section className=''>
+               <section id='faq' className='pt-72px'>
                   <FAQ />
                </section>
 

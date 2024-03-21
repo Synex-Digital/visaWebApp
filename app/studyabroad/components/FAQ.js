@@ -45,7 +45,7 @@ const FAQ = () => {
    };
    return (
       <>
-         <h3 className='text-28px font-medium text-primary mt-12 mb-11'>What are the <span className='text-secondary'>FREQUENTLY</span> ASKED QUESTIONS</h3>
+         <h3 className='text-28px font-medium text-primary mb-11'>What are the <span className='text-secondary'>FREQUENTLY</span> ASKED QUESTIONS</h3>
 
          <div className='flex flex-col gap-y-5'>
             {arr.map((item, index) => (
