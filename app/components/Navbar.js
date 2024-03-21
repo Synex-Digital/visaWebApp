@@ -1,10 +1,21 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import { IoCallOutline } from "react-icons/io5";
 import { FaAngleDown } from "react-icons/fa6";
 import MyImage from './../core/MyImage';
 
 const Navbar = () => {
+    const [dropdownOpen, setDeopdownOpen] = useState(false);
+
+    const handleDropdown = () => {
+        if (!dropdownOpen) {
+            setDeopdownOpen(true)
+        } else {
+            setDeopdownOpen(false)
+        }
+    }
+
     return (
         <header>
             <nav className="shadow-md w-full fixed z-50 bg-[#fff9f9]">
@@ -13,15 +24,20 @@ const Navbar = () => {
                         <MyImage source='/assets/Logo.svg' alt='Logo.svg' className='w-auto' />
                     </div>
                     <div className="flex justify-between w-3/5 px-7">
-                        <Link
-                            href={"#"}
-                            className="flex items-center gap-x-1.5"
-                        >
-                            Study Abroad{" "}
-                            <span>
-                                <FaAngleDown className="text-xs" />
-                            </span>
-                        </Link>
+
+                        <div className="">
+                            <button onClick={handleDropdown} type="button" className="flex items-center gap-x-1.5">Study Abroad{" "}
+                                <span>
+                                    <FaAngleDown className="text-xs" />
+                                </span>
+                            </button>
+
+                            <div className={`absolute top-full -translate-y-2 bg-slate-100 min-w-36 shadow-navbarDropdown z-[1] flex flex-col rounded-lg overflow-hidden duration-500 ${dropdownOpen ? 'block' : 'hidden'}`}>
+                                <Link className='py-2 px-3 text-lg hover:bg-courseFeeBorder duration-150' href="#">Link</Link>
+                                <Link className='py-2 px-3 text-lg hover:bg-courseFeeBorder duration-150' href="#">Link</Link>
+                            </div>
+                        </div>
+
                         <Link
                             className="flex items-center gap-x-1.5"
                             href={"#"}

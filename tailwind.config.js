@@ -52,6 +52,7 @@ module.exports = {
                     '-2px -2px 4px rgba(52, 74, 62, 0.21)',
                 ],
                 'Content': '0 0 2px rgba(52, 74, 62, 0.84)',
+                'navbarDropdown': '0px 8px 16px 0px rgba(0, 0, 0, 0.1)',
             },
             dropShadow: {
                 'custom': [
