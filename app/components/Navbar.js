@@ -18,10 +18,12 @@ const Navbar = () => {
 
     return (
         <header>
-            <nav className="shadow-md w-full fixed z-50 bg-[#fff9f9]">
+            <nav className="shadow-md w-full fixed z-50 bg-primaryGreen6">
                 <div className="container mx-auto px-2 flex justify-between items-center py-3">
                     <div className="w-1/5">
-                        <MyImage source='/assets/Logo.svg' alt='Logo.svg' className='w-auto' />
+                        <Link href={'/'}>
+                            <MyImage source='/assets/PrimaryLogoColor.png' alt='PrimaryLogoColor.png' className='w-20' />
+                        </Link>
                     </div>
                     <div className="flex justify-between w-3/5 px-7">
 

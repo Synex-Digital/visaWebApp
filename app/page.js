@@ -32,8 +32,8 @@ export default function Home() {
                             </h2>
                         </div>
                         <div className="flex gap-x-7 mt-20">
-                            <MyButton>Book a free consultation <BsArrowUpRight /></MyButton>
-                            <MyButton className='!bg-secondary hover:!bg-[#ECA517] !text-primary'>Events <BsArrowUpRight /></MyButton>
+                            <MyButton link='#'>Book a free consultation <BsArrowUpRight /></MyButton>
+                            <MyButton link='#' className='!bg-secondary hover:!bg-[#ECA517] !text-primary'>Events <BsArrowUpRight /></MyButton>
                         </div>
                     </div>
 

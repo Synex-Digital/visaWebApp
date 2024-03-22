@@ -20,6 +20,9 @@ module.exports = {
                 studyPagePtag: "#344A3E",
                 courseFeeBorder: "rgba(52, 74, 62, .2)",
                 courseFeeText: "rgba(52, 74, 62, .84)",
+
+                // new colors
+                primaryGreen6: '#ECE9FD',
             },
             fontSize: {
                 '28px': '28px',

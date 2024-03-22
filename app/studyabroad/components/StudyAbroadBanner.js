@@ -14,7 +14,7 @@ const StudyAbroadBanner = () => {
                      end to end expert guidance from us.</p>
                </div>
 
-               <MyButton>Get Started For Free</MyButton>
+               <MyButton link='#'>Get Started For Free</MyButton>
 
                {/* banner hero */}
                <div className="absolute bottom-16 right-0 -translate-x-20">

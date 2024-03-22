@@ -61,7 +61,7 @@ const Content = () => {
                   <h5 className='font-semibold text-base leading-7 tracking-custom text-studyPagePtag opacity-80 mt-5 mb-8 w-10/12 text-center mx-auto'>Do you find Canada to be even more impressive than expected? If so, you can make your dream of studying in Canada a reality by contacting AECC today.Want to study in Canada? Get FREE counselling</h5>
 
                   <div className='flex justify-center'>
-                     <MyButton>Want to study in canada? Get Free counselling</MyButton>
+                     <MyButton link='#'>Want to study in canada? Get Free counselling</MyButton>
                   </div>
 
                </section>
@@ -109,7 +109,7 @@ const Content = () => {
                      <h5 className='font-semibold text-studyPagePtag opacity-80 mb-9'>If you're beginning to perceive Canada as a comparatively more affordable option than other countries, seek guidance from our expert AECC counsellors to start your study-abroad journey today.</h5>
                   </div>
                   <div className='flex justify-center'>
-                     <MyButton>Contact AECC</MyButton>
+                     <MyButton link='#'>Contact AECC</MyButton>
                   </div>
                </section>
 

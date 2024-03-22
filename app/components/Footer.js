@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="container mx-auto px-2">
                 <div className="flex justify-between border-b-2 border-primary pb-20">
                     <div className="text-primary w-[20%]">
-                        <MyImage source='/assets/Logo.svg' alt='Logo.svg' className='w-auto' />
+                        <MyImage source='/assets/PrimaryLogoColor.png' alt='PrimaryLogoColor.png' className='w-20' />
                         <p className="text-[22px] mt-4 mb-3">
                             Let’s get social
                         </p>

@@ -121,7 +121,7 @@ const StudyWithVisaSlides = () => {
                   </ReactSlick>
                </div>
                <div className="flex justify-center mt-14">
-                  <MyButton>Explore More <BsArrowUpRight /></MyButton>
+                  <MyButton link='/pages/mypage'>Explore More <BsArrowUpRight /></MyButton>
                </div>
             </div>
          </section>
