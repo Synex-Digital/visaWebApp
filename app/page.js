@@ -2,11 +2,10 @@ import { FaGraduationCap } from "react-icons/fa6";
 import { BsArrowUpRight } from "react-icons/bs";
 import Link from "next/link";
 import Heading from "./components/Heading";
-import ReactSlick from "./components/ReactSlick";
-import { IoLocationOutline } from "react-icons/io5";
 import FaqSection from "./components/FaqSection";
 import MyImage from './core/MyImage';
 import MyButton from './core/MyButton';
+import StudyWithVisaSlides from './components/StudyWithVisaSlides';
 
 export default function Home() {
     return (
@@ -129,99 +128,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="pt-20 pb-14">
-                <div className="container mx-auto px-2">
-                    <Heading
-                        firstword={"STUDY"}
-                        title={"ABROAD WITH VISA"}
-                        subtitle={
-                            "Explore the best study destination in the world! Learn all about the countries top universities, scholarships, cost of living, post study work rights and more"
-                        }
-                    />
-                    <div className="mt-32 ">
-                        <ReactSlick className="w-full h-full ">
-                            <div className="relative !w-[96%]">
-                                <MyImage source='/assets/study.png' alt='study.png' className='w-full rounded-20px' />
-                                <div className=" absolute w-full h-1/5 rounded-[20px] bottom-0 left-0 bg-gradient-to-b from-transparent to-black"></div>
-                                <div className="absolute bottom-5 left-4 z-50 text-white">
-                                    <p className="text-xl font-medium">
-                                        Study in Australia
-                                    </p>
-                                    <p className="flex items-center gap-x-1 text-xs">
-                                        <span>
-                                            <IoLocationOutline />
-                                        </span>{" "}
-                                        Sydney, Australia
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="relative !w-[96%]">
-                                <MyImage source='/assets/study.png' alt='study.png' className='w-full rounded-20px' />
-                                <div className=" absolute w-full h-1/5 rounded-[20px] bottom-0 left-0 bg-gradient-to-b from-transparent to-black"></div>
-                                <div className="absolute bottom-5 left-4 z-50 text-white">
-                                    <p className="text-xl font-medium">
-                                        Study in Australia
-                                    </p>
-                                    <p className="flex items-center gap-x-1 text-xs">
-                                        <span>
-                                            <IoLocationOutline />
-                                        </span>{" "}
-                                        Sydney, Australia
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="relative !w-[96%]">
-                                <MyImage source='/assets/study.png' alt='study.png' className='w-full rounded-20px' />
-                                <div className=" absolute w-full h-1/5 rounded-[20px] bottom-0 left-0 bg-gradient-to-b from-transparent to-black"></div>
-                                <div className="absolute bottom-5 left-4 z-50 text-white">
-                                    <p className="text-xl font-medium">
-                                        Study in Australia
-                                    </p>
-                                    <p className="flex items-center gap-x-1 text-xs">
-                                        <span>
-                                            <IoLocationOutline />
-                                        </span>{" "}
-                                        Sydney, Australia
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="relative !w-[96%]">
-                                <MyImage source='/assets/study.png' alt='study.png' className='w-full rounded-20px' />
-                                <div className=" absolute w-full h-1/5 rounded-[20px] bottom-0 left-0 bg-gradient-to-b from-transparent to-black"></div>
-                                <div className="absolute bottom-5 left-4 z-50 text-white">
-                                    <p className="text-xl font-medium">
-                                        Study in Australia
-                                    </p>
-                                    <p className="flex items-center gap-x-1 text-xs">
-                                        <span>
-                                            <IoLocationOutline />
-                                        </span>{" "}
-                                        Sydney, Australia
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="relative !w-[96%]">
-                                <MyImage source='/assets/study.png' alt='study.png' className='w-full rounded-20px' />
-                                <div className=" absolute w-full h-1/5 rounded-[20px] bottom-0 left-0 bg-gradient-to-b from-transparent to-black"></div>
-                                <div className="absolute bottom-5 left-4 z-50 text-white">
-                                    <p className="text-xl font-medium">
-                                        Study in Australia
-                                    </p>
-                                    <p className="flex items-center gap-x-1 text-xs">
-                                        <span>
-                                            <IoLocationOutline />
-                                        </span>{" "}
-                                        Sydney, Australia
-                                    </p>
-                                </div>
-                            </div>
-                        </ReactSlick>
-                    </div>
-                    <div className="flex justify-center mt-14">
-                        <MyButton>Explore More <BsArrowUpRight /></MyButton>
-                    </div>
-                </div>
-            </section>
+            <StudyWithVisaSlides></StudyWithVisaSlides>
 
             <section className="bg-[#faf5f5] pt-14 pb-20">
                 <div className="container mx-auto px-2">
