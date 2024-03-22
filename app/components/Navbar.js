@@ -22,10 +22,10 @@ const Navbar = () => {
                 <div className="container mx-auto px-2 flex justify-between items-center py-3">
                     <div className="w-1/5">
                         <Link href={'/'}>
-                            <MyImage source='/assets/PrimaryLogoColor.png' alt='PrimaryLogoColor.png' className='w-20' />
+                            <MyImage source='/assets/Logos/PrimaryLogoColor.png' alt='PrimaryLogoColor.png' className='w-20' />
                         </Link>
                     </div>
-                    <div className="flex justify-between w-3/5 px-7">
+                    <div className="flex justify-between w-3/5 px-7 text-Black">
 
                         <div className="">
                             <button onClick={handleDropdown} type="button" className="flex items-center gap-x-1.5">Study Abroad{" "}
@@ -62,15 +62,16 @@ const Navbar = () => {
                         <Link href={"#"}>Appointment</Link>
                         <Link href={"#"}>About</Link>
                     </div>
+
                     <div className="flex w-1/5 gap-x-2 justify-end">
-                        <span className=" bg-[#EAECEB] flex items-center justify-center rounded-full w-12 h-12">
-                            <IoCallOutline className="text-xl text-primary" />
+                        <span className=" bg-secondaryYellow2 flex items-center justify-center rounded-full w-12 h-12">
+                            <IoCallOutline className="text-xl text-primaryGreen1" />
                         </span>
                         <div>
-                            <span className="block text-[#ABADAC]">
+                            <span className="block text-Ash1">
                                 Hotline 24/7
                             </span>
-                            <span className="block">+8801712345678</span>
+                            <span className="block text-Black">+8801712345678</span>
                         </div>
                     </div>
                 </div>
