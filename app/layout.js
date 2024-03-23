@@ -11,15 +11,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-    const currentPath = "/form";
-
-    const excludeComponents = currentPath === "/form";
 
     return (
         <>
-            {!excludeComponents && <Navbar />}
+            <Navbar />
             <main>{children}</main>
-            {!excludeComponents && <Footer />}
+            <Footer />
         </>
     );
 }

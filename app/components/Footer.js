@@ -1,12 +1,16 @@
+'use client';
 import React from "react";
 import { FaFacebookSquare, FaLinkedin, FaPinterestP } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import MyImage from '../core/MyImage';
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+    const pathName = usePathname();
+
     return (
-        <footer>
+        <footer className={`${pathName === '/form' ? 'hidden' : 'block'}`}>
             <div className="max-w-container mx-auto px-2">
                 <div className="flex justify-between border-b-2 border-primary pb-20">
                     <div className="text-primary w-[20%]">

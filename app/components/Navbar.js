@@ -4,10 +4,12 @@ import Link from "next/link";
 import { IoCallOutline } from "react-icons/io5";
 import { FaAngleDown } from "react-icons/fa6";
 import MyImage from './../core/MyImage';
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
     const [dropdownOpen, setDeopdownOpen] = useState(false);
-
+    const pathName = usePathname();
+    
     const handleDropdown = () => {
         if (!dropdownOpen) {
             setDeopdownOpen(true)
@@ -16,8 +18,10 @@ const Navbar = () => {
         }
     }
 
+
+
     return (
-        <header>
+        <header className={`${pathName === '/form' ? 'hidden' : 'block'}`}>
             <nav className="shadow-md w-full fixed z-50 bg-primaryGreen6">
                 <div className="max-w-container mx-auto px-2 flex justify-between items-center py-3">
                     <div className="w-1/5">

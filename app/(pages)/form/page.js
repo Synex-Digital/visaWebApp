@@ -4,13 +4,13 @@ import FormWrapper from './components/FormWrapper/FormWrapper';
 
 
 const form = () => {
-   const currentPath = "/pages/form";
+   // const currentPath = "/pages/form";
    return (
-      // <>
-      <RootLayout currentPath={currentPath}>
+      <>
+      {/* <RootLayout currentPath={currentPath}> */}
          <FormWrapper />
-      </RootLayout>
-      // </>
+      {/* </RootLayout> */}
+      </>
    )
 }
 
