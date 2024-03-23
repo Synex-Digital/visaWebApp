@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
         <header>
             <nav className="shadow-md w-full fixed z-50 bg-primaryGreen6">
-                <div className="container mx-auto px-2 flex justify-between items-center py-3">
+                <div className="max-w-container mx-auto px-2 flex justify-between items-center py-3">
                     <div className="w-1/5">
                         <Link href={'/'}>
                             <MyImage source='/assets/Logos/PrimaryLogoColor.png' alt='PrimaryLogoColor.png' className='w-20' />

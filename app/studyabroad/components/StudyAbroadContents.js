@@ -6,7 +6,7 @@ const StudyAbroadContents = () => {
    return (
       <>
          <div className='w-full pt-62 pb-454'>
-            <div className='container mx-auto px-2 grid grid-cols-9 gap-14'>
+            <div className='max-w-container mx-auto px-2 grid grid-cols-9 gap-14'>
                <SideBar />
                <Content />
             </div>

@@ -11,7 +11,7 @@ export default function Home() {
     return (
         <>
             <section className="h-dvh">
-                <div className="container h-full mx-auto px-2 flex justify-between relative">
+                <div className="max-w-container h-full mx-auto px-2 flex justify-between relative">
                     <div className="flex flex-col justify-center">
                         <h2 className="text-sm py-3 px-7 bg-[#EAECEB] flex items-center gap-x-2.5 rounded-full w-fit">
                             <span>
@@ -44,7 +44,7 @@ export default function Home() {
             </section>
 
             <section className="bg-[#faf5f5] pt-14 pb-20">
-                <div className="container mx-auto px-2">
+                <div className="max-w-container mx-auto px-2">
                     <Heading
                         firstword={"Our"}
                         title={"Programs"}
@@ -131,7 +131,7 @@ export default function Home() {
             <StudyWithVisaSlides></StudyWithVisaSlides>
 
             <section className="bg-[#faf5f5] pt-14 pb-20">
-                <div className="container mx-auto px-2">
+                <div className="max-w-container mx-auto px-2">
                     <Heading
                         firstword={"OUR"}
                         title={"EXPERIENCES"}
@@ -202,7 +202,7 @@ export default function Home() {
             </section>
 
             <section className="bg-primary py-16">
-                <div className="container mx-auto px-2 text-white">
+                <div className="max-w-container mx-auto px-2 text-white">
                     <div className="flex px-10 justify-between border-b-[#476354] border-b-8 pb-16">
                         <h3 className="text-4xl font-medium">
                             Let’s Explore the beauty
@@ -244,7 +244,7 @@ export default function Home() {
             </section>
 
             <section className="py-32">
-                <div className="container mx-auto px-2">
+                <div className="max-w-container mx-auto px-2">
                     <iframe
                         width="100%"
                         height="660"
@@ -259,7 +259,7 @@ export default function Home() {
             </section>
 
             <section>
-                <div className="container mx-auto px-2 mb-9">
+                <div className="max-w-container mx-auto px-2 mb-9">
                     <Heading
                         firstword={"FREQUENTLY"}
                         title={"ASKED QUESTIONS"}
@@ -272,7 +272,7 @@ export default function Home() {
             </section>
 
             <section className=" py-32">
-                <div className="container mx-auto px-2 py-16 bg-primary rounded-[20px]">
+                <div className="max-w-container mx-auto px-2 py-16 bg-primary rounded-[20px]">
                     <Heading
                         ticlassName={"text-white"}
                         subclassName={"text-white"}

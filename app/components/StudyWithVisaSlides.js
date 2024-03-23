@@ -10,22 +10,22 @@ import useFetch from './../useFetch';
 import Link from 'next/link';
 
 const StudyWithVisaSlides = () => {
-   const { data, loading, error } = useFetch("https://45degreebd.synexdigital.com/api/country");
+   // const { data, loading, error } = useFetch("https://45degreebd.synexdigital.com/api/country");
 
-   if (loading) {
-      return <p>Loading...</p>;
-   }
+   // if (loading) {
+   //    return <p>Loading...</p>;
+   // }
 
-   if (error) {
-      return <p>Error: {error.message}</p>;
-   }
+   // if (error) {
+   //    return <p>Error: {error.message}</p>;
+   // }
 
-   const { country } = data;
+   // const { country } = data;
 
    return (
       <>
          <section className="pt-20 pb-14">
-            <div className="container mx-auto px-2">
+            <div className="max-w-container mx-auto px-2">
                <Heading
                   firstword={"STUDY"}
                   title={"ABROAD WITH VISA"}
@@ -121,7 +121,7 @@ const StudyWithVisaSlides = () => {
                   </ReactSlick>
                </div>
                <div className="flex justify-center mt-14">
-                  <MyButton link='/pages/mypage'>Explore More <BsArrowUpRight /></MyButton>
+                  <MyButton link='/pages/form' >Explore More <BsArrowUpRight /></MyButton>
                </div>
             </div>
          </section>

@@ -7,7 +7,7 @@ import MyImage from '../core/MyImage';
 const Footer = () => {
     return (
         <footer>
-            <div className="container mx-auto px-2">
+            <div className="max-w-container mx-auto px-2">
                 <div className="flex justify-between border-b-2 border-primary pb-20">
                     <div className="text-primary w-[20%]">
                         <MyImage source='/assets/Logos/footerLogo.png' alt='footerLogo.png' className='w-28' />

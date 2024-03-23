@@ -7,6 +7,9 @@ module.exports = {
     ],
     theme: {
         extend: {
+            maxWidth: {
+                'container': '1233px',
+            },
             spacing: {
                 "48%": "48%",
             },
@@ -40,6 +43,8 @@ module.exports = {
                 Ash1: "#ABADAC",
                 Ash2: "rgba(156, 156, 156, .70)",
                 Ash3: "rgba(217, 217, 217, .50)",
+
+                BlackShade: "rgba(0, 0, 0, .4)",
             },
             fontSize: {
                 '28px': '28px',
@@ -59,6 +64,7 @@ module.exports = {
                 '62': '62px',
                 '160px': '160px',
                 '454': '454px',
+                '520': '520px',
                 '553': '553px',
                 '658': '658px',
                 '47px': '47px',

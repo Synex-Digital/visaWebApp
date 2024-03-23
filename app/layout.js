@@ -11,13 +11,15 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+    const currentPath = "/form";
+
+    const excludeComponents = currentPath === "/form";
+
     return (
-        <html lang="en">
-            <body className={outfit.className}>
-                <Navbar />
-                <main>{children}</main>
-                <Footer />
-            </body>
-        </html>
+        <>
+            {!excludeComponents && <Navbar />}
+            <main>{children}</main>
+            {!excludeComponents && <Footer />}
+        </>
     );
 }

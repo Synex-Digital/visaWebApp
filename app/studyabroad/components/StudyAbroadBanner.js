@@ -7,7 +7,7 @@ const StudyAbroadBanner = () => {
    return (
       <>
          <section className='bg-studyPageBanner relative '>
-            <div className='container h-full mx-auto px-2 pt-32 pb-36 flex flex-col justify-center items-start relative'>
+            <div className='max-w-container h-full mx-auto px-2 pt-32 pb-36 flex flex-col justify-center items-start relative'>
                <div className='w-553 mb-20'>
                   <h2 className='text-primary mt-10 mb-7 font-medium text-4xl'>Your dream of Studying in Canada is closer than you think!</h2>
                   <p className='text-studyPagePtag text-lg'>Learn everything you need to know about studying in Canada and get
