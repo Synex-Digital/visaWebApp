@@ -95,6 +95,36 @@ const StudyWithVisaSlides = () => {
                            </p>
                         </div>
                      </div>
+                     <div className="relative !w-[96%]">
+                        <MyImage source='/assets/study.png' alt='study.png' className='w-full rounded-20px' />
+                        <div className=" absolute w-full h-1/5 rounded-[20px] bottom-0 left-0 bg-gradient-to-b from-transparent to-black"></div>
+                        <div className="absolute bottom-5 left-4 z-50 text-white">
+                           <p className="text-xl font-medium">
+                              Study in Australia
+                           </p>
+                           <p className="flex items-center gap-x-1 text-xs">
+                              <span>
+                                 <IoLocationOutline />
+                              </span>{" "}
+                              Sydney, Australia
+                           </p>
+                        </div>
+                     </div>
+                     <div className="relative !w-[96%]">
+                        <MyImage source='/assets/study.png' alt='study.png' className='w-full rounded-20px' />
+                        <div className=" absolute w-full h-1/5 rounded-[20px] bottom-0 left-0 bg-gradient-to-b from-transparent to-black"></div>
+                        <div className="absolute bottom-5 left-4 z-50 text-white">
+                           <p className="text-xl font-medium">
+                              Study in Australia
+                           </p>
+                           <p className="flex items-center gap-x-1 text-xs">
+                              <span>
+                                 <IoLocationOutline />
+                              </span>{" "}
+                              Sydney, Australia
+                           </p>
+                        </div>
+                     </div>
 
                      {/* {
                         country?.map((item) => (
@@ -121,7 +151,7 @@ const StudyWithVisaSlides = () => {
                   </ReactSlick>
                </div>
                <div className="flex justify-center mt-14">
-                  <MyButton link='/pages/form' >Explore More <BsArrowUpRight /></MyButton>
+                  <MyButton link='#' >Explore More <BsArrowUpRight /></MyButton>
                </div>
             </div>
          </section>

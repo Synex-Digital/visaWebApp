@@ -45,13 +45,11 @@ const Navbar = () => {
                         </div>
 
                         <Link
-                            className="flex items-center gap-x-1.5"
-                            href={"#"}
+                            className="flex items-center gap-x-1.5 capitalize"
+                            href={"/form"}
+                            target="_blank"
                         >
-                            Study Service{" "}
-                            <span>
-                                <FaAngleDown className="text-xs" />
-                            </span>
+                            Student Assessment{" "}
                         </Link>
                         <Link
                             className="flex items-center gap-x-1.5"
