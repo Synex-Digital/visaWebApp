@@ -4,16 +4,20 @@ import SuitableDestination from './../SuitableDestination';
 import EnglishProficiencyValidation from './../EnglishProficiencyValidation';
 import EnglishProficiencyNeed from './../EnglishProficiencyNeed';
 import CountriesMatches from './../CountriesMatches';
+import FullName from './../FullName';
+import Email from './../Email';
 
 const FormWrapper = () => {
    return (
-      <div>
+      <>
          {/* <SelectLanguage /> */}
          {/* <SuitableDestination/> */}
          {/* <EnglishProficiencyValidation /> */}
          {/* <EnglishProficiencyNeed /> */}
-         <CountriesMatches />
-      </div>
+         {/* <CountriesMatches /> */}
+         {/* <FullName /> */}
+         <Email />
+      </>
    )
 }
 

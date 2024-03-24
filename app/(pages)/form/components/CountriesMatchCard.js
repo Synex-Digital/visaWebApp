@@ -2,10 +2,10 @@ import React from "react";
 import MyImage from "../../../core/MyImage";
 import { GiCheckMark } from "react-icons/gi";
 
-const CountriesMatchCard = ({key, countryName, flag}) => {
+const CountriesMatchCard = ({id, countryName, flag}) => {
   return (
     <>
-      <div key={key} className="col-span-1 h-20 bg-white p-2.5 flex items-center border border-Ash3 rounded-lg relative cursor-pointer">
+      <div key={id} className="col-span-1 h-20 bg-white p-2.5 flex items-center border border-Ash3 rounded-lg relative cursor-pointer">
         <MyImage
           source={flag}
           alt="flag United Kingdom"

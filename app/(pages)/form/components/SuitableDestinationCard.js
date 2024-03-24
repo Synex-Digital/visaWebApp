@@ -2,10 +2,10 @@ import React from "react";
 import MyImage from "./../../../core/MyImage";
 import { GiCheckMark } from "react-icons/gi";
 
-const SuitableDestinationCard = ({ cardHeading, academicRange, key}) => {
+const SuitableDestinationCard = ({ cardHeading, academicRange, id}) => {
   return (
     <>
-      <div key={key} className="col-span-1 flex items-center bg-white rounded-xl border-2 border-Ash1 p-2.5 relative cursor-pointer">
+      <div key={id} className="col-span-1 flex items-center bg-white rounded-xl border-2 border-Ash1 p-2.5 relative cursor-pointer">
         <div className="">
           {/* <MyImage source="" alt="" className="" /> */}
           <svg
