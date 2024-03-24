@@ -6,6 +6,7 @@ import EnglishProficiencyNeed from './../EnglishProficiencyNeed';
 import CountriesMatches from './../CountriesMatches';
 import FullName from './../FullName';
 import Email from './../Email';
+import PhoneNumber from './../PhoneNumber';
 
 const FormWrapper = () => {
    return (
@@ -16,7 +17,8 @@ const FormWrapper = () => {
          {/* <EnglishProficiencyNeed /> */}
          {/* <CountriesMatches /> */}
          {/* <FullName /> */}
-         <Email />
+         {/* <Email /> */}
+         <PhoneNumber />
       </>
    )
 }

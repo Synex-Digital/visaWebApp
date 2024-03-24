@@ -2,18 +2,18 @@ import React from "react";
 import FormHeader from "./FormHeader";
 import InputField from "./InputField";
 import ContinueBtn from "./ContinueBtn";
-import { MdLabel } from "react-icons/md";
+import { FaPaperPlane } from "react-icons/fa6";
 
-const FullName = () => {
+const PhoneNumber = () => {
   return (
     <>
       <section className="w-full h-dvh">
         <div className="max-w-container mx-auto px-2">
-          <FormHeader heading="Full Name" subHeading=" " />
+          <FormHeader heading="Phone Number" subHeading=" " />
           <InputField
-            labelIcon={<MdLabel />}
-            type="text"
-            placeholder="Please enter your name as per your passport1"
+            labelIcon={<FaPaperPlane />}
+            type="email"
+            placeholder="Please enter valid email"
           />
         </div>
         <ContinueBtn />
@@ -22,4 +22,4 @@ const FullName = () => {
   );
 };
 
-export default FullName;
+export default PhoneNumber;
