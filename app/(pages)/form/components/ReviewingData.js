@@ -5,7 +5,7 @@ import ReviewCard from "./ReviewCard";
 const ReviewingData = () => {
   return (
     <>
-      <section className="">
+      <section className="pb-20">
         <div className="max-w-container mx-auto px-2">
           <div className="">
             {/* logo */}
@@ -30,6 +30,18 @@ const ReviewingData = () => {
             {/* cards */}
             <div className="mt-10 grid grid-cols-3 gap-7">
               <ReviewCard />
+              <ReviewCard />
+              <ReviewCard />
+              <ReviewCard />
+              <ReviewCard />
+              <ReviewCard />
+              <ReviewCard />
+              <ReviewCard />
+            </div>
+            {/* buttons */}
+            <div className="flex justify-center gap-6 mt-28">
+              <button className="w-40 h-60px border border-primaryGreen1 bg-transparent text-xl font-semibold text-Black duration-150 hover:border-secondaryYellow1 hover:text-secondaryYellow1" type="button">Back</button>
+              <button className="w-40 h-60px border border-primaryGreen1 bg-primaryGreen1 text-xl font-semibold text-white duration-150 opacity-90 hover:opacity-100" type="button">Submit</button>
             </div>
           </div>
         </div>

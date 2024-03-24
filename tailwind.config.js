@@ -44,6 +44,58 @@ module.exports = {
         Ash2: "rgba(156, 156, 156, .70)",
         Ash3: "rgba(217, 217, 217, .50)",
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+                BlackShade: "rgba(0, 0, 0, .4)",
+            },
+            fontSize: {
+                '28px': '28px',
+                '36px': '36px',
+            },
+            letterSpacing: {
+                custom: '5%',
+            },
+            borderRadius: {
+                '20px': '20px',
+            },
+            spacing: {
+                '15px': '15px',
+                '18px': '18px',
+                '28px': '28px',
+                '33px': '33px',
+                '62': '62px',
+                '60px': '60px',
+                '160px': '160px',
+                '454': '454px',
+                '520': '520px',
+                '553': '553px',
+                '658': '658px',
+                '47px': '47px',
+                '61px': '61px',
+                '72px': '72px',
+                '90px': '90px',
+                '55px': '55px',
+                '420px': '420px',
+                '151px': '151px',
+            },
+            boxShadow: {
+                'sidebar': [
+                    '2px 4px 4px rgba(52, 74, 62, 0.21)',
+                    '-2px -2px 4px rgba(52, 74, 62, 0.21)',
+                ],
+                'Content': '0 0 2px rgba(52, 74, 62, 0.84)',
+                'navbarDropdown': '0px 8px 16px 0px rgba(0, 0, 0, 0.1)',
+            },
+            dropShadow: {
+                'custom': [
+                    '2px 4px 4px rgba(52, 74, 62, 0.21)',
+                    '-2px -2px 4px rgba(52, 74, 62, 0.21)',
+                ]
+            }
+        },
+=======
+>>>>>>> Stashed changes
         BlackShade: "rgba(0, 0, 0, .4)",
       },
       fontSize: {
@@ -88,6 +140,10 @@ module.exports = {
           "-2px -2px 4px rgba(52, 74, 62, 0.21)",
         ],
       },
+<<<<<<< Updated upstream
+=======
+>>>>>>> 3324571a91db7e316f762e0d8966d72229ba1bae
+>>>>>>> Stashed changes
     },
   },
   plugins: [],

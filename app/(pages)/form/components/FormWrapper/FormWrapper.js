@@ -14,6 +14,8 @@ import PassingYear from '../PassingYear';
 import PursueSubject from '../PursueSubject';
 import AdditionRemark from '../AdditionRemark';
 import ReviewingData from '../ReviewingData';
+import LastConfirmation from '../LastConfirmation';
+import ThankYou from '../ThankYou';
 
 const FormWrapper = () => {
    return (
@@ -33,7 +35,9 @@ const FormWrapper = () => {
          {/* <PursueSubject /> */}
          {/* <BeConnected /> */}
          {/* <AdditionRemark /> */}
-         <ReviewingData />
+         {/* <ReviewingData /> */}
+         {/* <LastConfirmation /> */}
+         <ThankYou />
       </>
    )
 }
