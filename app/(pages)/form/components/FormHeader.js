@@ -19,7 +19,7 @@ const FormHeader = ({heading, subHeading}) => {
         </button>
 
         <div className="w-10/12">
-          <h2 className="text-4xl font-bold text-Black text-center capitalize">
+          <h2 className="text-4xl font-bold leading-[140%] text-Black text-center capitalize">
             {heading}
           </h2>
           <p className="text-base text-black opacity-60 text-center mt-2 capitalize">

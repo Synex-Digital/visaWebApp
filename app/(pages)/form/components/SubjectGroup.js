@@ -2,25 +2,25 @@ import React from "react";
 import FormHeader from "./FormHeader";
 import InputField from "./InputField";
 import ContinueBtn from "./ContinueBtn";
-import { MdLabel } from "react-icons/md";
+import MyImage from "../../../core/MyImage";
 
-const FullName = () => {
+const SubjectGroup = () => {
   return (
     <>
       <section className="w-full h-dvh">
         <div className="max-w-container mx-auto px-2">
-          <FormHeader heading="Full Name" subHeading=" " />
+          <FormHeader heading="Major" subHeading=" " />
           <InputField
-            labelIcon={<MdLabel />}
+            labelIcon={<MyImage source='https://unispaces.sgp1.digitaloceanspaces.com/vts-campaign/1685870561347.svg' alt='icon' className='w-6'/>}
             type="text"
-            placeholder="Please enter your name as per your passport1"
+            placeholder="Example: BBA - Marketing, Civil Engineering, Social Science, etc"
             error=''
           />
         </div>
         <ContinueBtn />
       </section>
     </>
-  );
-};
+  )
+}
 
-export default FullName;
+export default SubjectGroup
