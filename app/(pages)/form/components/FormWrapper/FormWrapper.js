@@ -7,6 +7,13 @@ import CountriesMatches from './../CountriesMatches';
 import FullName from './../FullName';
 import Email from './../Email';
 import PhoneNumber from './../PhoneNumber';
+import AcademicQualification from './../AcademicQualification';
+import SubjectGroup from './../SubjectGroup';
+import Result from '../Result';
+import PassingYear from '../PassingYear';
+import PursueSubject from '../PursueSubject';
+import AdditionRemark from '../AdditionRemark';
+import ReviewingData from '../ReviewingData';
 
 const FormWrapper = () => {
    return (
@@ -18,7 +25,15 @@ const FormWrapper = () => {
          {/* <CountriesMatches /> */}
          {/* <FullName /> */}
          {/* <Email /> */}
-         <PhoneNumber />
+         {/* <PhoneNumber /> */}
+         {/* <AcademicQualification /> */}
+         {/* <SubjectGroup /> */}
+         {/* <Result /> */}
+         {/* <PassingYear /> */}
+         {/* <PursueSubject /> */}
+         {/* <BeConnected /> */}
+         {/* <AdditionRemark /> */}
+         <ReviewingData />
       </>
    )
 }
