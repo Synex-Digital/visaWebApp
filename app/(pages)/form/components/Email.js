@@ -14,6 +14,7 @@ const Email = () => {
             labelIcon={<FaPaperPlane />}
             type="email"
             placeholder="Please enter valid email"
+            error=''
           />
         </div>
         <ContinueBtn />
