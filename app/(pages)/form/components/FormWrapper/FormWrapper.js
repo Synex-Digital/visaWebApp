@@ -20,7 +20,7 @@ import ThankYou from '../ThankYou';
 const FormWrapper = () => {
    return (
       <>
-         {/* <SelectLanguage /> */}
+         <SelectLanguage />
          {/* <SuitableDestination/> */}
          {/* <EnglishProficiencyValidation /> */}
          {/* <EnglishProficiencyNeed /> */}
@@ -37,7 +37,7 @@ const FormWrapper = () => {
          {/* <AdditionRemark /> */}
          {/* <ReviewingData /> */}
          {/* <LastConfirmation /> */}
-         <ThankYou />
+         {/* <ThankYou /> */}
       </>
    )
 }
