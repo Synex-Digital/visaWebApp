@@ -34,15 +34,6 @@ const StudyWithVisaSlides = () => {
                   className="w-full rounded-20px"
                 />
                 <div className=" absolute w-full h-1/5 rounded-[20px] bottom-0 left-0 bg-gradient-to-b from-transparent to-black"></div>
-                {/* <div className="absolute bottom-5 left-4 z-50 text-white">
-              <p className="text-xl font-medium">Study in Australia</p>
-              <p className="flex items-center gap-x-1 text-xs">
-                <span>
-                  <IoLocationOutline />
-                </span>{" "}
-                Sydney, Australia
-              </p>
-            </div> */}
               </div>
               <div className="relative !w-[96%]">
                 <MyImage
@@ -51,106 +42,7 @@ const StudyWithVisaSlides = () => {
                   className="w-full rounded-20px"
                 />
                 <div className=" absolute w-full h-1/5 rounded-[20px] bottom-0 left-0 bg-gradient-to-b from-transparent to-black"></div>
-                {/* <div className="absolute bottom-5 left-4 z-50 text-white">
-              <p className="text-xl font-medium">Study in Australia</p>
-              <p className="flex items-center gap-x-1 text-xs">
-                <span>
-                  <IoLocationOutline />
-                </span>{" "}
-                Sydney, Australia
-              </p>
-            </div> */}
               </div>
-
-              {/* <div className="relative !w-[96%]">
-            <MyImage
-              source="/assets/study.png"
-              alt="study.png"
-              className="w-full rounded-20px"
-            />
-            <div className=" absolute w-full h-1/5 rounded-[20px] bottom-0 left-0 bg-gradient-to-b from-transparent to-black"></div>
-            <div className="absolute bottom-5 left-4 z-50 text-white">
-              <p className="text-xl font-medium">Study in Australia</p>
-              <p className="flex items-center gap-x-1 text-xs">
-                <span>
-                  <IoLocationOutline />
-                </span>{" "}
-                Sydney, Australia
-              </p>
-            </div>
-          </div>
-          <div className="relative !w-[96%]">
-            <MyImage
-              source="/assets/study.png"
-              alt="study.png"
-              className="w-full rounded-20px"
-            />
-            <div className=" absolute w-full h-1/5 rounded-[20px] bottom-0 left-0 bg-gradient-to-b from-transparent to-black"></div>
-            <div className="absolute bottom-5 left-4 z-50 text-white">
-              <p className="text-xl font-medium">Study in Australia</p>
-              <p className="flex items-center gap-x-1 text-xs">
-                <span>
-                  <IoLocationOutline />
-                </span>{" "}
-                Sydney, Australia
-              </p>
-            </div>
-          </div>
-          <div className="relative !w-[96%]">
-            <MyImage
-              source="/assets/study.png"
-              alt="study.png"
-              className="w-full rounded-20px"
-            />
-            <div className=" absolute w-full h-1/5 rounded-[20px] bottom-0 left-0 bg-gradient-to-b from-transparent to-black"></div>
-            <div className="absolute bottom-5 left-4 z-50 text-white">
-              <p className="text-xl font-medium">Study in Australia</p>
-              <p className="flex items-center gap-x-1 text-xs">
-                <span>
-                  <IoLocationOutline />
-                </span>{" "}
-                Sydney, Australia
-              </p>
-            </div>
-          </div>
-          <div className="relative !w-[96%]">
-            <MyImage
-              source="/assets/study.png"
-              alt="study.png"
-              className="w-full rounded-20px"
-            />
-            <div className=" absolute w-full h-1/5 rounded-[20px] bottom-0 left-0 bg-gradient-to-b from-transparent to-black"></div>
-            <div className="absolute bottom-5 left-4 z-50 text-white">
-              <p className="text-xl font-medium">Study in Australia</p>
-              <p className="flex items-center gap-x-1 text-xs">
-                <span>
-                  <IoLocationOutline />
-                </span>{" "}
-                Sydney, Australia
-              </p>
-            </div>
-          </div> */}
-
-              {/* {
-                    country?.map((item) => (
-                       <div key={item.id} className="relative !w-[96%]">
-                          {console.log(item.slugs)}
-                          <MyImage source='/assets/study.png' alt='study.png' className='w-full rounded-20px' />
-                          <div className=" absolute w-full h-1/5 rounded-[20px] bottom-0 left-0 bg-gradient-to-b from-transparent to-black"></div>
-                          <div className="absolute bottom-5 left-4 z-50 text-white">
-                             <p className="text-xl font-medium">
-                                {item.name}
-                             </p>
-                             <p className="flex items-center gap-x-1 text-xs">
-                                <span>
-                                   <IoLocationOutline />
-                                </span>{" "}
-                                Sydney, Australia
-                             </p>
-                          </div>
-                       </div>
-                    ))
-                 } */}
             </ReactSlick>
           </div>
           <div className="flex justify-center mt-14">
@@ -203,10 +95,7 @@ const StudyWithVisaSlides = () => {
                       {item.name}
                     </Link>
                     <p className="flex items-center gap-x-1 text-xs">
-                      <span>
-                        <IoLocationOutline />
-                      </span>{" "}
-                      Sydney, Australia
+                      Learn more
                     </p>
                   </div>
                 </div>
