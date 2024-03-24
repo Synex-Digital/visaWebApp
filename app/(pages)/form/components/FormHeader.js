@@ -4,7 +4,6 @@ import { IoClose } from "react-icons/io5";
 import MyImage from "../../../core/MyImage";
 
 const FormHeader = ({heading, subHeading}) => {
-  console.log(heading)
   return (
     <>
       <div className="py-7">

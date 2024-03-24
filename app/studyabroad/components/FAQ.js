@@ -49,7 +49,7 @@ const FAQ = () => {
 
          <div className='flex flex-col gap-y-5'>
             {arr.map((item, index) => (
-               <div className={`${openIndex === index ? 'bg-primary text-white rounded-20px py-6 px-7' : ''}`}>
+               <div key={index} className={`${openIndex === index ? 'bg-primary text-white rounded-20px py-6 px-7' : ''}`}>
 
                   {/* FAQ question button */}
                   <button

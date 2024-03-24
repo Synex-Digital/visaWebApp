@@ -32,7 +32,7 @@ const FaqSection = () => {
     return (
         <div className="max-w-container mx-auto px-2 flex flex-col gap-y-5">
             {arr.map((item, index) => (
-                <div className={`${openIndex === index ? 'bg-primary text-white rounded-20px py-7 px-9' : ''}`}>
+                <div key={index} className={`${openIndex === index ? 'bg-primary text-white rounded-20px py-7 px-9' : ''}`}>
 
                     {/* FAQ question button */}
                     <button
