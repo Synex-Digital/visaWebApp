@@ -4,17 +4,17 @@ import InputField from "./InputField";
 import ContinueBtn from "./ContinueBtn";
 import { MdLabel } from "react-icons/md";
 
-const FullName = () => {
+const FullName = ({ setStep }) => {
   return (
     <>
       <section className="w-full h-dvh">
         <div className="max-w-container mx-auto px-2">
-          <FormHeader heading="Full Name" subHeading=" " />
+          <FormHeader heading="Full Name" subHeading=" " setStep={setStep} />
           <InputField
             labelIcon={<MdLabel />}
             type="text"
             placeholder="Please enter your name as per your passport1"
-            error=''
+            error=""
           />
         </div>
         <ContinueBtn />

@@ -2,11 +2,17 @@
 import React, { useEffect, useState } from "react";
 import MyImage from "../../../core/MyImage";
 
-const SelectLanguage = () => {
+const SelectLanguage = ({ nextStep }) => {
   const [enter, setEnter] = useState(false);
+
   useEffect(() => {
     setEnter(true);
   }, []);
+
+  const handleLang = (value) => {
+    console.log('Language => ', value);
+    nextStep()
+  };
   return (
     <>
       <section
@@ -20,7 +26,10 @@ const SelectLanguage = () => {
               Please Select A Language
             </h3>
             <div className="flex gap-5">
-              <div className="group p-4 pt-5 border border-dashed border-Ash1 rounded-lg cursor-pointer duration-300 hover:border-Black">
+              <div
+                onClick={() => handleLang("en")}
+                className="group p-4 pt-5 border border-dashed border-Ash1 rounded-lg cursor-pointer duration-300 hover:border-Black"
+              >
                 <MyImage
                   source="/assets/flags/uk-flag.webp"
                   alt="uk-flag.webp"
@@ -30,14 +39,17 @@ const SelectLanguage = () => {
                   English
                 </h3>
               </div>
-              <div className="group p-4 pt-5 border border-dashed border-Ash1 rounded-lg cursor-pointer duration-300 hover:border-Black">
+              <div
+                onClick={() => handleLang("bn")}
+                className="group p-4 pt-5 border border-dashed border-Ash1 rounded-lg cursor-pointer duration-300 hover:border-Black"
+              >
                 <MyImage
                   source="/assets/flags/bd-flag.webp"
                   alt="bd-flag.webp"
                   className="w-24"
                 />
                 <h3 className="text-Black mt-2 text-center group-hover:text-primaryGreen2">
-                  English
+                  Bangla
                 </h3>
               </div>
             </div>

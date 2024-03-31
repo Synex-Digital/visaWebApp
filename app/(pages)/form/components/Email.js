@@ -4,17 +4,21 @@ import InputField from "./InputField";
 import ContinueBtn from "./ContinueBtn";
 import { FaPaperPlane } from "react-icons/fa6";
 
-const Email = () => {
+const Email = ({ setStep }) => {
   return (
     <>
       <section className="w-full h-dvh">
         <div className="max-w-container mx-auto px-2">
-          <FormHeader heading="Email Address" subHeading=" " />
+          <FormHeader
+            heading="Email Address"
+            subHeading=" "
+            setStep={setStep}
+          />
           <InputField
             labelIcon={<FaPaperPlane />}
             type="email"
             placeholder="Please enter valid email"
-            error=''
+            error=""
           />
         </div>
         <ContinueBtn />

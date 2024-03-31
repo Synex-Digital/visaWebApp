@@ -2,10 +2,10 @@ import React from "react";
 import MyImage from "./../../../core/MyImage";
 import { GiCheckMark } from "react-icons/gi";
 
-const CheckCard = ({ cardInfo, imageLink }) => {
+const CheckCard = ({ cardInfo, imageLink, onClick }) => {
   return (
     <>
-      <div className="px-12 pt-8 pb-16 rounded-2xl bg-white inline-block border border-Ash3 hover:border-Black duration-150 cursor-pointer overflow-hidden relative">
+      <div onClick={() => onClick(cardInfo)} className="px-12 pt-8 pb-16 rounded-2xl bg-white inline-block border border-Ash3 hover:border-Black duration-150 cursor-pointer overflow-hidden relative">
         <MyImage
           source={imageLink}
           alt=""
