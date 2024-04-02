@@ -20,6 +20,7 @@ const Email = ({ nextStep, prevStep, returnToLang }) => {
   const handleSubmit = () => {
     if (validEmail) {
       setErrorMessage("");
+      setError(false);
       console.log(email);
       nextStep();
     } else {

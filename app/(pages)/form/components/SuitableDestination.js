@@ -55,7 +55,7 @@ const SuitableDestination = ({ nextStep, returnToLang }) => {
     setSelectedCardData("");
     setSelectedCardId(cardId === selectedCardId ? null : cardId);
     if (destinationInfo[cardId - 1]?.id === cardId) {
-      setSelectedCardData(destinationInfo[cardId - 1]);
+      setSelectedCardData([destinationInfo[cardId - 1]]);
     }
   };
   useEffect(() => {

@@ -93,11 +93,29 @@ const FormWrapper = () => {
           />
         );
       case 9:
-        return <AcademicQualification nextStep={nextStep} />;
+        return (
+          <AcademicQualification
+            nextStep={nextStep}
+            prevStep={prevStep}
+            returnToLang={returnToLang}
+          />
+        );
       case 10:
-        return <SubjectGroup nextStep={nextStep} />;
+        return (
+          <SubjectGroup
+            nextStep={nextStep}
+            prevStep={prevStep}
+            returnToLang={returnToLang}
+          />
+        );
       case 11:
-        return <Result nextStep={nextStep} />;
+        return (
+          <Result
+            nextStep={nextStep}
+            prevStep={prevStep}
+            returnToLang={returnToLang}
+          />
+        );
       case 12:
         return <PassingYear nextStep={nextStep} />;
       case 13:

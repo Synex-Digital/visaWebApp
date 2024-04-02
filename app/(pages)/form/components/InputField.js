@@ -7,6 +7,7 @@ const InputField = ({
   error,
   errorMessage,
   inputData,
+  className
 }) => {
   const [inputValue, setInputValue] = useState("");
 
@@ -26,7 +27,7 @@ const InputField = ({
           {labelIcon}
         </label>
         <input
-          className={`${error? 'border-red-500 focus:border-red-500' : 'border-Ash1 focus:border-secondaryYellow1'} w-420px border rounded-md p-3 pl-12 focus:outline-0 text-base`}
+          className={`${error? 'border-red-500 focus:border-red-500' : 'border-Ash1 focus:border-secondaryYellow1'} w-420px border rounded-md p-3 pl-12 focus:outline-0 text-base ${className}`}
           type={type}
           id="input"
           placeholder={placeholder}

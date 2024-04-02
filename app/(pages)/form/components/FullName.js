@@ -13,6 +13,7 @@ const FullName = ({ nextStep, prevStep, returnToLang }) => {
   const handleSubmit = () => {
     if (fullName ) {
       setErrorMessage("");
+      setError(false);
       console.log(fullName);
       nextStep()
     } else {
@@ -31,6 +32,7 @@ const FullName = ({ nextStep, prevStep, returnToLang }) => {
             returnToLang={returnToLang}
           />
           <InputField
+          className='!capitalize'
             labelIcon={<MdLabel />}
             type="text"
             placeholder="Please enter your name as per your passport"

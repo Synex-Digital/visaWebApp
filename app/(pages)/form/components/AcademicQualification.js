@@ -1,8 +1,9 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import FormHeader from "./FormHeader";
 import CourseName from "./CourseName";
 
-const AcademicQualification = () => {
+const AcademicQualification = ({ nextStep, prevStep, returnToLang }) => {
   const courses = [
     {
       id: "1",
@@ -47,6 +48,24 @@ const AcademicQualification = () => {
         "https://unispaces.sgp1.digitaloceanspaces.com/vts-campaign/1685870574024.svg",
     },
   ];
+
+  const [selectedCardId, setSelectedCardId] = useState(null);
+  const [selectedCardData, setSelectedCardData] = useState();
+
+  const handleCardClick = (cardId) => {
+    setSelectedCardId(cardId === selectedCardId ? null : cardId);
+    if (courses[cardId - 1]?.id === cardId) {
+      setSelectedCardData([courses[cardId - 1]]);
+    }
+  };
+
+  useEffect(() => {
+    if (selectedCardId) {
+      console.log("Selected Card Data:", selectedCardData); // that will pass data in api or local storage
+      nextStep()
+    }
+  }, [selectedCardData]);
+
   return (
     <>
       <section className="h-dvh w-full">
@@ -54,6 +73,8 @@ const AcademicQualification = () => {
           <FormHeader
             heading="Your Last Academic Qualification"
             subHeading=""
+            prevStep={prevStep}
+            returnToLang={returnToLang}
           />
           <div className="grid grid-cols-3 gap-10 mt-10">
             {courses?.map((item) => (
@@ -62,6 +83,8 @@ const AcademicQualification = () => {
                 id={item.id}
                 course={item.course}
                 imgLink={item.imgLink}
+                isSelected={item.id === selectedCardId}
+                onClick={handleCardClick}
               />
             ))}
           </div>

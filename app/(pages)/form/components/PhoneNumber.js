@@ -10,7 +10,7 @@ const PhoneNumber = ({ nextStep, prevStep, returnToLang }) => {
   const [error, setError] = useState("");
 
   const handleSubmit = () => {
-    if (phone.length <= 4) {
+    if (phone.length <= 4 || phone.length >= 15) {
       setError("Enter phone number");
     } else {
       setError("");
