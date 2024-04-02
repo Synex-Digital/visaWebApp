@@ -1,12 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FormHeader from "./FormHeader";
 import CheckCard from "./CheckCard";
 
 const EnglishProficiencyNeed = ({ nextStep, prevStep, returnToLang }) => {
-  const handleClick = (cardInfo) => {
-    console.log("EnglishProficiencyNeed => ", cardInfo);
-    nextStep()
+  const checkData = [
+    {
+      id: 1,
+      cardInfo: "no",
+      imageLink:
+        "https://unispaces.sgp1.digitaloceanspaces.com/vts-campaign/1688462043676.svg",
+    },
+    {
+      id: 2,
+      cardInfo: "yes",
+      imageLink:
+        "https://unispaces.sgp1.digitaloceanspaces.com/vts-campaign/1688462007847.svg",
+    },
+  ];
+  const [selectedCardId, setSelectedCardId] = useState("");
+  const [selectedCardData, setSelectedCardData] = useState("");
+
+  const handleClick = (cardId) => {
+    setSelectedCardId(cardId === selectedCardId ? null : cardId);
+    if (checkData[cardId - 1]?.id === cardId) {
+      setSelectedCardData([checkData[cardId - 1]]);
+    }
   };
+
+  useEffect(() => {
+    if (selectedCardId) {
+      console.log("Selected Card Data:", selectedCardData); // that will pass data in api or local storage
+      nextStep();
+    }
+  }, [selectedCardData]);
   return (
     <>
       <section className="h-dvh w-full">
@@ -18,16 +44,16 @@ const EnglishProficiencyNeed = ({ nextStep, prevStep, returnToLang }) => {
             returnToLang={returnToLang}
           />
           <div className="flex justify-center gap-x-8 mt-10">
-            <CheckCard
-              onClick={handleClick}
-              cardInfo="no"
-              imageLink="https://unispaces.sgp1.digitaloceanspaces.com/vts-campaign/1688462043676.svg"
-            />
-            <CheckCard
-              onClick={handleClick}
-              cardInfo="yes"
-              imageLink="https://unispaces.sgp1.digitaloceanspaces.com/vts-campaign/1688462007847.svg"
-            />
+            {checkData?.map((item) => (
+              <CheckCard
+                key={item.id}
+                id={item.id}
+                cardInfo={item.cardInfo}
+                imageLink={item.imageLink}
+                isSelected={item.id === selectedCardId}
+                onClick={() => handleClick(item.id)}
+              />
+            ))}
           </div>
         </div>
       </section>

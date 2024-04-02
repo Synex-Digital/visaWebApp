@@ -2,7 +2,7 @@ import React from "react";
 import MyImage from "../../../core/MyImage";
 import Link from "next/link";
 
-const ThankYou = () => {
+const ThankYou = ({ returnToLang }) => {
   return (
     <>
       <section className="h-dvh w-full bg-white">
@@ -25,15 +25,18 @@ const ThankYou = () => {
               contact you soon. In the meantime please feel free to browse our
               website:
               <br />{" "}
-              <Link className="text-primaryGreen1" href="#">
+              <Link className="text-primaryGreen1" href="/">
                 45 Degree Education Consultancy
               </Link>{" "}
             </h3>
           </div>
           <div className="flex justify-center">
-            <Link href="/" className="px-6 py-3 bg-blue-800 rounded-md font-semibold text-white">
+            <button
+              onClick={returnToLang}
+              className="px-6 py-3 bg-blue-800 rounded-md font-semibold text-white"
+            >
               Back To Home
-            </Link>
+            </button>
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 import React from "react";
 import { RiErrorWarningLine } from "react-icons/ri";
 
-const LastConfirmation = () => {
+const LastConfirmation = ({ nextStep, prevStep }) => {
   return (
     <>
       <section
@@ -18,9 +18,17 @@ const LastConfirmation = () => {
             <h4 className="text-xl text-black text-center opacity-70">
               Are you sure? Your answer can not be changed after submission.
             </h4>
-            <div className="w-full flex justify-end mt-6">
+            <div className="w-full flex justify-end mt-6 gap-x-4">
               <button
-                className="text-lg text-white font-medium rounded-md bg-primaryGreen1 px-6 py-2 uppercase duration-150 hover:bg-green-400"
+                onClick={prevStep}
+                className="text-lg text-Black font-medium rounded-md px-6 py-2 border-[1px] border-Black uppercase duration-150 hover:border-red-600 hover:text-red-600"
+                type="button"
+              >
+                cancel
+              </button>
+              <button
+              onClick={nextStep}
+                className="text-lg text-white font-medium rounded-md bg-primaryGreen1 px-6 py-2 border-[1px] border-primaryGreen1 uppercase duration-150 hover:bg-green-400 hover:border-green-400"
                 type="button"
               >
                 ok

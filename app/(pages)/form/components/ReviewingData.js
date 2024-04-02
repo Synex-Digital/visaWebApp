@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import MyImage from "../../../core/MyImage";
 import ReviewCard from "./ReviewCard";
 
-const ReviewingData = () => {
+const ReviewingData = ({ prevStep, nextStep }) => {
+  const [isEditable, setIsEditable] = useState(false);
+
+  const handleSubmit = () => {
+    nextStep(
+    );
+  };
   return (
     <>
       <section className="pb-20">
@@ -15,7 +21,7 @@ const ReviewingData = () => {
                 alt="PrimaryLogoNavyBlue.png"
                 className="w-36 mx-auto"
               />
-            </div> 
+            </div>
             {/* heading */}
             <div className="w-full">
               <h2 className="text-4xl font-bold leading-[140%] text-Black text-center capitalize my-5">
@@ -29,19 +35,24 @@ const ReviewingData = () => {
             </div>
             {/* cards */}
             <div className="mt-10 grid grid-cols-3 gap-7">
-              <ReviewCard />
-              <ReviewCard />
-              <ReviewCard />
-              <ReviewCard />
-              <ReviewCard />
-              <ReviewCard />
-              <ReviewCard />
-              <ReviewCard />
+              <ReviewCard isEditable={isEditable} />
             </div>
             {/* buttons */}
             <div className="flex justify-center gap-6 mt-28">
-              <button className="w-40 h-60px border border-primaryGreen1 bg-transparent text-xl font-semibold text-Black duration-150 hover:border-secondaryYellow1 hover:text-secondaryYellow1" type="button">Back</button>
-              <button className="w-40 h-60px border border-primaryGreen1 bg-primaryGreen1 text-xl font-semibold text-white duration-150 opacity-90 hover:opacity-100" type="button">Submit</button>
+              <button
+                onClick={prevStep}
+                className="w-40 py-3 border border-primaryGreen1 bg-transparent text-xl font-semibold text-Black duration-150 hover:border-secondaryYellow1 hover:text-secondaryYellow1"
+                type="button"
+              >
+                Back
+              </button>
+              <button
+                onClick={handleSubmit}
+                className="w-40 py-3 border border-primaryGreen1 bg-primaryGreen1 text-xl font-semibold text-white duration-150 opacity-90 hover:opacity-100"
+                type="button"
+              >
+                Submit
+              </button>
             </div>
           </div>
         </div>

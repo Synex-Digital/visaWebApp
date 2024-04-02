@@ -13,6 +13,7 @@ import SubjectGroup from "./../SubjectGroup";
 import Result from "../Result";
 import PassingYear from "../PassingYear";
 import PursueSubject from "../PursueSubject";
+import BeConnected from "../BeConnected";
 import AdditionRemark from "../AdditionRemark";
 import ReviewingData from "../ReviewingData";
 import LastConfirmation from "../LastConfirmation";
@@ -117,19 +118,48 @@ const FormWrapper = () => {
           />
         );
       case 12:
-        return <PassingYear nextStep={nextStep} />;
+        return (
+          <PassingYear
+            nextStep={nextStep}
+            prevStep={prevStep}
+            returnToLang={returnToLang}
+          />
+        );
       case 13:
-        return <PursueSubject nextStep={nextStep} />;
+        return (
+          <PursueSubject
+            nextStep={nextStep}
+            prevStep={prevStep}
+            returnToLang={returnToLang}
+          />
+        );
       case 14:
-        return <BeConnected nextStep={nextStep} />;
+        return (
+          <BeConnected
+            nextStep={nextStep}
+            prevStep={prevStep}
+            returnToLang={returnToLang}
+          />
+        );
       case 15:
-        return <AdditionRemark nextStep={nextStep} />;
+        return (
+          <AdditionRemark
+            nextStep={nextStep}
+            prevStep={prevStep}
+            returnToLang={returnToLang}
+          />
+        );
       case 16:
-        return <ReviewingData nextStep={nextStep} />;
+        return (
+          <ReviewingData
+            nextStep={nextStep}
+            prevStep={prevStep}
+          />
+        );
       case 17:
-        return <LastConfirmation nextStep={nextStep} />;
+        return <LastConfirmation nextStep={nextStep} prevStep={prevStep} />;
       case 18:
-        return <ThankYou nextStep={nextStep} />;
+        return <ThankYou returnToLang={returnToLang} />;
 
       default:
         return <></>;

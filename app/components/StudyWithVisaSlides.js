@@ -60,7 +60,7 @@ const StudyWithVisaSlides = () => {
   }
 
   const { country } = data;
-  console.log(country);
+  // console.log(country);
 
   return (
     <>
