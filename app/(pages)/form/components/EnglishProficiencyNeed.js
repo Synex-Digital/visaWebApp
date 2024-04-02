@@ -2,7 +2,7 @@ import React from "react";
 import FormHeader from "./FormHeader";
 import CheckCard from "./CheckCard";
 
-const EnglishProficiencyNeed = ({ nextStep, prevStep, setStep }) => {
+const EnglishProficiencyNeed = ({ nextStep, prevStep, returnToLang }) => {
   const handleClick = (cardInfo) => {
     console.log("EnglishProficiencyNeed => ", cardInfo);
     nextStep()
@@ -15,7 +15,7 @@ const EnglishProficiencyNeed = ({ nextStep, prevStep, setStep }) => {
             prevStep={prevStep}
             heading="Are you willing to take the English Proficiency Test?"
             subHeading=""
-            setStep={setStep}
+            returnToLang={returnToLang}
           />
           <div className="flex justify-center gap-x-8 mt-10">
             <CheckCard

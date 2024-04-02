@@ -2,7 +2,7 @@ import React from "react";
 import FormHeader from "./FormHeader";
 import CheckCard from "./CheckCard";
 
-const EnglishProficiencyValidation = ({ nextStep, prevStep, step, setStep }) => {
+const EnglishProficiencyValidation = ({ nextStep, prevStep, step, setStep, returnToLang }) => {
   const handleClick = (cardInfo) => {
     if (cardInfo === "yes") {
       console.log('English proficiency => ', cardInfo)
@@ -20,7 +20,7 @@ const EnglishProficiencyValidation = ({ nextStep, prevStep, step, setStep }) => 
             prevStep={prevStep}
             heading="Do you have a valid English Proficiency Certificate?"
             subHeading=""
-            setStep={setStep}
+            returnToLang={returnToLang}
           />
           <div className="flex justify-center gap-x-8 mt-10">
             <CheckCard

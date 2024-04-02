@@ -4,7 +4,7 @@ import FormHeader from "./FormHeader";
 import CountriesMatchCard from "./CountriesMatchCard";
 import ContinueBtn from "./ContinueBtn";
 
-const CountriesMatches = ({ nextStep, setStep }) => {
+const CountriesMatches = ({ nextStep, prevStep, returnToLang }) => {
   const countries = [
     {
       id: "1",
@@ -118,11 +118,16 @@ const CountriesMatches = ({ nextStep, setStep }) => {
       flag: "https://unispaces.sgp1.digitaloceanspaces.com/nebula/1682578346198.png",
     },
   ];
-  const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+  const [isBtnDisabled, setIsBtnDisabled] = useState(false);
   const [selectedCards, setSelectedCards] = useState([]);
 
   const handleCardClick = (card) => {
     console.log(card);
+  };
+
+  const handleSubmit = () => {
+    console.log("ok");
+    nextStep()
   };
 
   return (
@@ -132,7 +137,8 @@ const CountriesMatches = ({ nextStep, setStep }) => {
           <FormHeader
             heading="The Following Countries Matches Your Category. Select the Country of Your Preference"
             subHeading="(You can select up to 3 countries)"
-            setStep={setStep}
+            prevStep={prevStep}
+            returnToLang={returnToLang}
           />
           <div className="grid grid-cols-3 gap-10 pb-28">
             {countries?.map((item) => (
@@ -146,6 +152,7 @@ const CountriesMatches = ({ nextStep, setStep }) => {
             ))}
           </div>
           <ContinueBtn
+            handleSubmit={handleSubmit}
             nextStep={nextStep}
             isBtnDisabled={isBtnDisabled}
             setIsBtnDisabled={setIsBtnDisabled}

@@ -5,7 +5,7 @@ import { IoClose } from "react-icons/io5";
 import MyImage from "../../../core/MyImage";
 import { FaCircleExclamation } from "react-icons/fa6";
 
-const FormHeader = ({ heading, subHeading, prevStep, setStep }) => {
+const FormHeader = ({ heading, subHeading, prevStep, returnToLang }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = () => {
@@ -15,7 +15,7 @@ const FormHeader = ({ heading, subHeading, prevStep, setStep }) => {
     setIsOpen(false);
   };
   const handleYesBtn = () => {
-    setStep(1)
+    returnToLang()
   };
   return (
     <>

@@ -1,23 +1,45 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import FormHeader from "./FormHeader";
 import InputField from "./InputField";
 import ContinueBtn from "./ContinueBtn";
 import { MdLabel } from "react-icons/md";
 
-const FullName = ({ setStep }) => {
+const FullName = ({ nextStep, prevStep, returnToLang }) => {
+  const [fullName, setFullName] = useState();
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('')
+
+  const handleSubmit = () => {
+    if (fullName ) {
+      setErrorMessage("");
+      console.log(fullName);
+      nextStep()
+    } else {
+      setError(true);
+      setErrorMessage("Enter Your Name");
+    }
+  };
   return (
     <>
       <section className="w-full h-dvh">
         <div className="max-w-container mx-auto px-2">
-          <FormHeader heading="Full Name" subHeading=" " setStep={setStep} />
+          <FormHeader
+            heading="Full Name"
+            subHeading=" "
+            prevStep={prevStep}
+            returnToLang={returnToLang}
+          />
           <InputField
             labelIcon={<MdLabel />}
             type="text"
-            placeholder="Please enter your name as per your passport1"
-            error=""
+            placeholder="Please enter your name as per your passport"
+            errorMessage={errorMessage}
+            error={error}
+            inputData={setFullName}
           />
         </div>
-        <ContinueBtn />
+        <ContinueBtn handleSubmit={handleSubmit} />
       </section>
     </>
   );

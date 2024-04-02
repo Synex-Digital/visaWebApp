@@ -6,7 +6,6 @@ const CourseName = ({ id, course, imgLink }) => {
   return (
     <>
       <div
-        key={id}
         className="col-span-1 h-90px bg-white p-2.5 flex items-center border border-Ash3 rounded-lg relative cursor-pointer"
       >
         <MyImage source={imgLink} alt="flag United Kingdom" className="w-16" />

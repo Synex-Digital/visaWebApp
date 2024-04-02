@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import FormHeader from "./FormHeader";
 import SuitableDestinationCard from "./SuitableDestinationCard";
 
-const SuitableDestination = ({ nextStep, setStep }) => {
+const SuitableDestination = ({ nextStep, returnToLang }) => {
   const information = {
     header: "Assess Your Profile for Suitable Study Destination",
     destinations: [
@@ -69,7 +69,7 @@ const SuitableDestination = ({ nextStep, setStep }) => {
     <>
       <section className="w-full h-dvh">
         <div className="max-w-container mx-auto px-2">
-          <FormHeader heading={information.header} subHeading=" " setStep={setStep} />
+          <FormHeader heading={information.header} subHeading=" " returnToLang={returnToLang} />
           <div className="w-full h-40 grid grid-cols-3 gap-10">
             {destinationInfo?.map((item) => (
               <SuitableDestinationCard

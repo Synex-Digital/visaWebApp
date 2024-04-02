@@ -36,7 +36,12 @@ const FormWrapper = () => {
       case 1:
         return <SelectLanguage nextStep={nextStep} />;
       case 2:
-        return <SuitableDestination nextStep={nextStep} setStep={setStep}/>;
+        return (
+          <SuitableDestination
+            nextStep={nextStep}
+            returnToLang={returnToLang}
+          />
+        );
       case 3:
         return (
           <EnglishProficiencyValidation
@@ -44,43 +49,75 @@ const FormWrapper = () => {
             prevStep={prevStep}
             step={step}
             setStep={setStep}
+            returnToLang={returnToLang}
           />
         );
       case 4:
         return (
-          <EnglishProficiencyNeed prevStep={prevStep} nextStep={nextStep} setStep={setStep}/>
+          <EnglishProficiencyNeed
+            prevStep={prevStep}
+            nextStep={nextStep}
+            returnToLang={returnToLang}
+          />
         );
       case 5:
-        return <CountriesMatches nextStep={nextStep} setStep={setStep}/>;
+        return (
+          <CountriesMatches
+            nextStep={nextStep}
+            prevStep={prevStep}
+            returnToLang={returnToLang}
+          />
+        ); // not completed.
       case 6:
-        return <FullName nextStep={nextStep} setStep={setStep}/>;
+        return (
+          <FullName
+            nextStep={nextStep}
+            prevStep={prevStep}
+            returnToLang={returnToLang}
+          />
+        );
       case 7:
-        return <Email nextStep={nextStep} setStep={setStep}/>;
+        return (
+          <Email
+            nextStep={nextStep}
+            prevStep={prevStep}
+            returnToLang={returnToLang}
+          />
+        );
       case 8:
-        return <PhoneNumber nextStep={nextStep} setStep={setStep}/>;
+        return (
+          <PhoneNumber
+            nextStep={nextStep}
+            prevStep={prevStep}
+            returnToLang={returnToLang}
+          />
+        );
+      case 9:
+        return <AcademicQualification nextStep={nextStep} />;
+      case 10:
+        return <SubjectGroup nextStep={nextStep} />;
+      case 11:
+        return <Result nextStep={nextStep} />;
+      case 12:
+        return <PassingYear nextStep={nextStep} />;
+      case 13:
+        return <PursueSubject nextStep={nextStep} />;
+      case 14:
+        return <BeConnected nextStep={nextStep} />;
+      case 15:
+        return <AdditionRemark nextStep={nextStep} />;
+      case 16:
+        return <ReviewingData nextStep={nextStep} />;
+      case 17:
+        return <LastConfirmation nextStep={nextStep} />;
+      case 18:
+        return <ThankYou nextStep={nextStep} />;
 
       default:
-        return (
-          <>
-          </>
-        );
+        return <></>;
     }
   };
-  return (
-    <>
-      {renderStep()}
-      {/* <AcademicQualification /> */}
-      {/* <SubjectGroup /> */}
-      {/* <Result /> */}
-      {/* <PassingYear /> */}
-      {/* <PursueSubject /> */}
-      {/* <BeConnected /> */}
-      {/* <AdditionRemark /> */}
-      {/* <ReviewingData /> */}
-      {/* <LastConfirmation /> */}
-      {/* <ThankYou /> */}
-    </>
-  );
+  return <>{renderStep()}</>;
 };
 
 export default FormWrapper;
