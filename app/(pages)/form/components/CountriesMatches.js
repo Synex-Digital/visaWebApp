@@ -136,7 +136,7 @@ const CountriesMatches = ({ nextStep, prevStep, returnToLang }) => {
 
   const handleSubmit = () => {
     console.log(selectedCards);
-    // nextStep()
+    nextStep()
   };
 
   return (
