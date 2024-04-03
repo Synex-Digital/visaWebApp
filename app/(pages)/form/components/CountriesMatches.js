@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import FormHeader from "./FormHeader";
 import CountriesMatchCard from "./CountriesMatchCard";
 import ContinueBtn from "./ContinueBtn";
@@ -119,15 +119,24 @@ const CountriesMatches = ({ nextStep, prevStep, returnToLang }) => {
     },
   ];
   const [isBtnDisabled, setIsBtnDisabled] = useState(false);
+  const [isCardDisabled, setIsCardDisabled] = useState(false);
   const [selectedCards, setSelectedCards] = useState([]);
 
   const handleCardClick = (card) => {
-    console.log(card);
+    setSelectedCards((prevSelectedCards) => [...prevSelectedCards, card]);
   };
 
+  useEffect(() => {
+    if (selectedCards.length === 0 || selectedCards.length > 3) {
+      setIsBtnDisabled(true);
+    } else {
+      setIsBtnDisabled(false);
+    }
+  }, [selectedCards]);
+
   const handleSubmit = () => {
-    console.log("ok");
-    nextStep()
+    console.log(selectedCards);
+    // nextStep()
   };
 
   return (
@@ -148,6 +157,7 @@ const CountriesMatches = ({ nextStep, prevStep, returnToLang }) => {
                 countryName={item.countryName}
                 flag={item.flag}
                 onClick={handleCardClick}
+                isCardDisabled={isCardDisabled}
               />
             ))}
           </div>

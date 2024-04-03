@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SelectLanguage from "./../SelectLanguage";
 import SuitableDestination from "./../SuitableDestination";
 import EnglishProficiencyValidation from "./../EnglishProficiencyValidation";
@@ -21,6 +21,12 @@ import ThankYou from "../ThankYou";
 
 const FormWrapper = () => {
   const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState({
+    language: "",
+    fullName: "",
+    email: "",
+    phoneNumber: "",
+  });
 
   const nextStep = () => {
     setStep(step + 1);
@@ -35,7 +41,7 @@ const FormWrapper = () => {
   const renderStep = () => {
     switch (step) {
       case 1:
-        return <SelectLanguage nextStep={nextStep} />;
+        return <SelectLanguage nextStep={nextStep} formData={formData} setFormData={setFormData} />;
       case 2:
         return (
           <SuitableDestination
@@ -150,12 +156,7 @@ const FormWrapper = () => {
           />
         );
       case 16:
-        return (
-          <ReviewingData
-            nextStep={nextStep}
-            prevStep={prevStep}
-          />
-        );
+        return <ReviewingData nextStep={nextStep} prevStep={prevStep} />;
       case 17:
         return <LastConfirmation nextStep={nextStep} prevStep={prevStep} />;
       case 18:

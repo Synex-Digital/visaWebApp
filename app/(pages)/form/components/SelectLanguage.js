@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import MyImage from "../../../core/MyImage";
 
-const SelectLanguage = ({ nextStep }) => {
+const SelectLanguage = ({ nextStep, formData, setFormData }) => {
   const [enter, setEnter] = useState(false);
 
   useEffect(() => {
@@ -10,6 +10,10 @@ const SelectLanguage = ({ nextStep }) => {
   }, []);
 
   const handleLang = (value) => {
+    setFormData({
+      ...formData,
+      language: value,
+    })
     console.log('Language => ', value);
     nextStep()
   };
