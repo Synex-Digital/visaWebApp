@@ -14,7 +14,6 @@ const SelectLanguage = ({ nextStep, formData, setFormData }) => {
       ...formData,
       language: value,
     })
-    console.log('Language => ', value);
     nextStep()
   };
   return (

@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from "react";
 import FormHeader from "./FormHeader";
-import InputField from "./InputField";
 import ContinueBtn from "./ContinueBtn";
-import { MdLabel } from "react-icons/md";
 
-const AdditionRemark = ({ nextStep, prevStep, returnToLang }) => {
+const AdditionRemark = ({
+  nextStep,
+  prevStep,
+  returnToLang,
+  formData,
+  setFormData,
+}) => {
   const [textareaValue, setTextareaValue] = useState("");
   const [additionalInput, setAdditionalInput] = useState("");
 
   useEffect(() => {
-    setAdditionalInput([textareaValue]);
+    setAdditionalInput(textareaValue);
   }, [textareaValue]);
 
   const handleSubmit = () => {
     setTextareaValue("");
-    console.log(additionalInput);
+    setFormData({ ...formData, additionRemark: additionalInput });
     nextStep();
   };
   return (

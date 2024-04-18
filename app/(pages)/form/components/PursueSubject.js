@@ -4,7 +4,13 @@ import InputField from "./InputField";
 import ContinueBtn from "./ContinueBtn";
 import MyImage from "../../../core/MyImage";
 
-const PursueSubject = ({ nextStep, prevStep, returnToLang }) => {
+const PursueSubject = ({
+  nextStep,
+  prevStep,
+  returnToLang,
+  formData,
+  setFormData,
+}) => {
   const [subject, setSubject] = useState("");
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -13,8 +19,8 @@ const PursueSubject = ({ nextStep, prevStep, returnToLang }) => {
     if (subject) {
       setErrorMessage("");
       setError(false);
-      console.log(subject);
-      nextStep()
+      setFormData({ ...formData, pursueSubject: subject });
+      nextStep();
     } else {
       setError(true);
       setErrorMessage("Enter Subject Name");
@@ -45,7 +51,7 @@ const PursueSubject = ({ nextStep, prevStep, returnToLang }) => {
             inputData={setSubject}
           />
         </div>
-        <ContinueBtn handleSubmit={handleSubmit}/>
+        <ContinueBtn handleSubmit={handleSubmit} />
       </section>
     </>
   );

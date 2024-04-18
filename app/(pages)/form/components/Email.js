@@ -5,7 +5,7 @@ import InputField from "./InputField";
 import ContinueBtn from "./ContinueBtn";
 import { FaPaperPlane } from "react-icons/fa6";
 
-const Email = ({ nextStep, prevStep, returnToLang }) => {
+const Email = ({ nextStep, prevStep, returnToLang, formData, setFormData }) => {
   const [validEmail, setValidEmail] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
@@ -15,13 +15,13 @@ const Email = ({ nextStep, prevStep, returnToLang }) => {
 
   useEffect(() => {
     setValidEmail(String(email).toLowerCase().match(regex));
-  },[email]);
+  }, [email]);
 
   const handleSubmit = () => {
     if (validEmail) {
       setErrorMessage("");
       setError(false);
-      console.log(email);
+      setFormData({ ...formData, email });
       nextStep();
     } else {
       setError(true);

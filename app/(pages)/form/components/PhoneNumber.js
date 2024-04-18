@@ -5,7 +5,13 @@ import ContinueBtn from "./ContinueBtn";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 
-const PhoneNumber = ({ nextStep, prevStep, returnToLang }) => {
+const PhoneNumber = ({
+  nextStep,
+  prevStep,
+  returnToLang,
+  formData,
+  setFormData,
+}) => {
   const [phone, setPhone] = useState("");
   const [error, setError] = useState("");
 
@@ -14,7 +20,7 @@ const PhoneNumber = ({ nextStep, prevStep, returnToLang }) => {
       setError("Enter phone number");
     } else {
       setError("");
-      console.log(phone);
+      setFormData({ ...formData, phoneNumber: phone });
       nextStep();
     }
   };

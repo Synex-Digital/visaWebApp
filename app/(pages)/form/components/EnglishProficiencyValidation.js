@@ -8,7 +8,9 @@ const EnglishProficiencyValidation = ({
   prevStep,
   returnToLang,
   setStep,
-  step,
+  step,  
+  formData,
+  setFormData,
 }) => {
   const checkData = [
     {
@@ -25,19 +27,22 @@ const EnglishProficiencyValidation = ({
     },
   ];
   const [selectedCardId, setSelectedCardId] = useState("");
-  const [selectedCardData, setSelectedCardData] = useState("");
+  const [selectedCardData, setSelectedCardData] = useState(null);
 
   const handleClick = (cardId) => {
     setSelectedCardId(cardId === selectedCardId ? null : cardId);
     if (checkData[cardId - 1]?.id === cardId) {
-      setSelectedCardData([checkData[cardId - 1]]);
+      setSelectedCardData(checkData[cardId - 1]);
     }
   };
 
   useEffect(() => {
     if (selectedCardId) {
-      console.log("Selected Card Data:", selectedCardData); // that will pass data in api or local storage
-      if (selectedCardData[0].cardInfo === "yes") {
+      setFormData({
+        ...formData,
+        englishProficiencyValidation: selectedCardData,
+      })
+      if (selectedCardData.cardInfo === "yes") {
         setStep(step + 2);
       } else {
         nextStep();

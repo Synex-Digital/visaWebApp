@@ -1,7 +1,12 @@
 import React from "react";
 import { RiErrorWarningLine } from "react-icons/ri";
 
-const LastConfirmation = ({ nextStep, prevStep }) => {
+const LastConfirmation = ({ nextStep, prevStep, submitForm }) => {
+  const handleSubmit = () => {
+    console.log(localStorage.getItem("formData"));
+    submitForm();
+    nextStep();
+  }
   return (
     <>
       <section
@@ -27,7 +32,7 @@ const LastConfirmation = ({ nextStep, prevStep }) => {
                 cancel
               </button>
               <button
-              onClick={nextStep}
+              onClick={handleSubmit}
                 className="text-lg text-white font-medium rounded-md bg-primaryGreen1 px-6 py-2 border-[1px] border-primaryGreen1 uppercase duration-150 hover:bg-green-400 hover:border-green-400"
                 type="button"
               >

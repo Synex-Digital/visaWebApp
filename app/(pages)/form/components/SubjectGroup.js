@@ -4,7 +4,13 @@ import InputField from "./InputField";
 import ContinueBtn from "./ContinueBtn";
 import MyImage from "../../../core/MyImage";
 
-const SubjectGroup = ({ nextStep, prevStep, returnToLang }) => {
+const SubjectGroup = ({
+  nextStep,
+  prevStep,
+  returnToLang,
+  formData,
+  setFormData,
+}) => {
   const [subject, setSubject] = useState("");
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -13,8 +19,8 @@ const SubjectGroup = ({ nextStep, prevStep, returnToLang }) => {
     if (subject) {
       setErrorMessage("");
       setError(false);
-      console.log(subject);
-      nextStep()
+      setFormData({ ...formData, subjectGroup: subject });
+      nextStep();
     } else {
       setError(true);
       setErrorMessage("Enter Subject Name");

@@ -4,21 +4,45 @@ import InputField from "./InputField";
 import ContinueBtn from "./ContinueBtn";
 import MyImage from "../../../core/MyImage";
 
-const Result = ({ nextStep, prevStep, returnToLang }) => {
+const Result = ({
+  nextStep,
+  prevStep,
+  returnToLang,
+  formData,
+  setFormData,
+}) => {
   const [results, setResults] = useState("");
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = () => {
-    if (!results || results <= 0 || results > 5 ) {
-      setError(true);
-      setErrorMessage("Enter Your Result");
-    } else {
-      setErrorMessage("");
-      setError(false);
-      console.log(results);
-      nextStep();
+  const verifyGPAInput = (gpaStr) => {
+    try {
+      const gpa = parseFloat(gpaStr);
+      if (Number.isNaN(gpa)) {
+        setError(true);
+        setErrorMessage("Invalid input. Please enter a numeric value for GPA.");
+      } else if (gpa <= 0 || gpa > 5.0) {
+        setError(true);
+        setErrorMessage("Invalid GPA value. GPA should be between 0 and 5.0.");
+      } else {
+        if (!gpaStr.includes(".")) {
+          setErrorMessage(
+            "Invalid input. GPA value should contain a decimal point."
+          );
+        } else {
+          setErrorMessage("");
+          setError(false);
+          setFormData({ ...formData, results });
+          nextStep();
+        }
+      }
+    } catch (error) {
+      setValidationResult("An error occurred while validating the GPA.");
     }
+  };
+
+  const handleSubmit = () => {
+    verifyGPAInput(results);
   };
   return (
     <>

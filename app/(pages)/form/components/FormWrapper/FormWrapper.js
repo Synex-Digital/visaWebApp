@@ -19,15 +19,48 @@ import ReviewingData from "../ReviewingData";
 import LastConfirmation from "../LastConfirmation";
 import ThankYou from "../ThankYou";
 
-const FormWrapper = () => {
-  const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState({
-    language: "",
-    fullName: "",
-    email: "",
-    phoneNumber: "",
-  });
+// save steps in local storage
+const saveSteps = () => {
+  const savedStep = localStorage.getItem("step");
+  return savedStep ? JSON.parse(savedStep) : 1;
+};
+// save formData in local storage
+const saveFormData = () => {
+  const savedformData = localStorage.getItem("formData");
+  return saveFormData
+    ? JSON.parse(savedformData)
+    : {
+        language: "",
+        suitableStudyDestination: "",
+        englishProficiencyValidation: "",
+        englishProficiencyNeed: "",
+        fullName: "",
+        email: "",
+        phoneNumber: "",
+        academicQualification: "",
+        subjectGroup: "",
+        result: "",
+        passingYear: "",
+        pursueSubject: "",
+        beConnected: "",
+        additionRemark: "",
+      };
+};
 
+const FormWrapper = () => {
+  // states for store data
+  const [formData, setFormData] = useState(saveFormData);
+  const [step, setStep] = useState(saveSteps);
+
+  // each time data changes the local storage will be updated
+  useEffect(() => {
+    localStorage.setItem("formData", JSON.stringify(formData));
+  }, [formData]);
+  useEffect(() => {
+    localStorage.setItem("step", JSON.stringify(step));
+  }, [step]);
+
+  // functions for next, prev and return step
   const nextStep = () => {
     setStep(step + 1);
   };
@@ -36,17 +69,32 @@ const FormWrapper = () => {
   };
   const returnToLang = () => {
     setStep(1);
+    localStorage.removeItem("formData");
   };
 
+  // submit form in api and remove data from local storage
+  const submitForm = () => {
+    localStorage.removeItem("formData");
+  };
+
+  //  render steps
   const renderStep = () => {
     switch (step) {
       case 1:
-        return <SelectLanguage nextStep={nextStep} formData={formData} setFormData={setFormData} />;
+        return (
+          <SelectLanguage
+            nextStep={nextStep}
+            formData={formData}
+            setFormData={setFormData}
+          />
+        );
       case 2:
         return (
           <SuitableDestination
             nextStep={nextStep}
             returnToLang={returnToLang}
+            formData={formData}
+            setFormData={setFormData}
           />
         );
       case 3:
@@ -57,6 +105,8 @@ const FormWrapper = () => {
             step={step}
             setStep={setStep}
             returnToLang={returnToLang}
+            formData={formData}
+            setFormData={setFormData}
           />
         );
       case 4:
@@ -65,6 +115,8 @@ const FormWrapper = () => {
             prevStep={prevStep}
             nextStep={nextStep}
             returnToLang={returnToLang}
+            formData={formData}
+            setFormData={setFormData}
           />
         );
       case 5:
@@ -81,6 +133,8 @@ const FormWrapper = () => {
             nextStep={nextStep}
             prevStep={prevStep}
             returnToLang={returnToLang}
+            formData={formData}
+            setFormData={setFormData}
           />
         );
       case 7:
@@ -89,6 +143,8 @@ const FormWrapper = () => {
             nextStep={nextStep}
             prevStep={prevStep}
             returnToLang={returnToLang}
+            formData={formData}
+            setFormData={setFormData}
           />
         );
       case 8:
@@ -97,6 +153,8 @@ const FormWrapper = () => {
             nextStep={nextStep}
             prevStep={prevStep}
             returnToLang={returnToLang}
+            formData={formData}
+            setFormData={setFormData}
           />
         );
       case 9:
@@ -105,6 +163,8 @@ const FormWrapper = () => {
             nextStep={nextStep}
             prevStep={prevStep}
             returnToLang={returnToLang}
+            formData={formData}
+            setFormData={setFormData}
           />
         );
       case 10:
@@ -113,6 +173,8 @@ const FormWrapper = () => {
             nextStep={nextStep}
             prevStep={prevStep}
             returnToLang={returnToLang}
+            formData={formData}
+            setFormData={setFormData}
           />
         );
       case 11:
@@ -121,6 +183,8 @@ const FormWrapper = () => {
             nextStep={nextStep}
             prevStep={prevStep}
             returnToLang={returnToLang}
+            formData={formData}
+            setFormData={setFormData}
           />
         );
       case 12:
@@ -129,6 +193,8 @@ const FormWrapper = () => {
             nextStep={nextStep}
             prevStep={prevStep}
             returnToLang={returnToLang}
+            formData={formData}
+            setFormData={setFormData}
           />
         );
       case 13:
@@ -137,6 +203,8 @@ const FormWrapper = () => {
             nextStep={nextStep}
             prevStep={prevStep}
             returnToLang={returnToLang}
+            formData={formData}
+            setFormData={setFormData}
           />
         );
       case 14:
@@ -145,6 +213,8 @@ const FormWrapper = () => {
             nextStep={nextStep}
             prevStep={prevStep}
             returnToLang={returnToLang}
+            formData={formData}
+            setFormData={setFormData}
           />
         );
       case 15:
@@ -153,12 +223,20 @@ const FormWrapper = () => {
             nextStep={nextStep}
             prevStep={prevStep}
             returnToLang={returnToLang}
+            formData={formData}
+            setFormData={setFormData}
           />
         );
       case 16:
         return <ReviewingData nextStep={nextStep} prevStep={prevStep} />;
       case 17:
-        return <LastConfirmation nextStep={nextStep} prevStep={prevStep} />;
+        return (
+          <LastConfirmation
+            nextStep={nextStep}
+            prevStep={prevStep}
+            submitForm={submitForm}
+          />
+        );
       case 18:
         return <ThankYou returnToLang={returnToLang} />;
 

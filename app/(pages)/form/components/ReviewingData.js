@@ -5,9 +5,9 @@ import ReviewCard from "./ReviewCard";
 const ReviewingData = ({ prevStep, nextStep }) => {
   const [isEditable, setIsEditable] = useState(false);
 
+  const localStorageData = JSON.parse(localStorage.getItem("formData"));
   const handleSubmit = () => {
-    nextStep(
-    );
+    nextStep();
   };
   return (
     <>
@@ -35,7 +35,112 @@ const ReviewingData = ({ prevStep, nextStep }) => {
             </div>
             {/* cards */}
             <div className="mt-10 grid grid-cols-3 gap-7">
-              <ReviewCard isEditable={isEditable} />
+              <ReviewCard
+                isEditable={isEditable}
+                header="Assess Your Profile for Suitable Study Destination"
+                icon={localStorageData.suitableStudyDestination.icon}
+                iconSize="w-10"
+                cardInfo={localStorageData.suitableStudyDestination.cardHeading}
+              />
+              <ReviewCard
+                isEditable={isEditable}
+                header="Do you have a valid English Proficiency Certificate?"
+                icon={localStorageData.englishProficiencyValidation.imageLink}
+                iconSize="w-10"
+                cardInfo={
+                  localStorageData.englishProficiencyValidation.cardInfo
+                }
+              />
+              {localStorageData.englishProficiencyNeed ? (
+                <ReviewCard
+                  isEditable={isEditable}
+                  header="Are you willing to take the English Proficiency Test?"
+                  icon={localStorageData.englishProficiencyNeed.imageLink}
+                  iconSize="w-10"
+                  cardInfo={localStorageData.englishProficiencyNeed.cardInfo}
+                />
+              ) : (
+                <></>
+              )}
+              <ReviewCard
+                isEditable={isEditable}
+                header="The Following Countries Matches Your Category. Select the Country of Your Preference"
+                icon={''}
+                iconSize="w-10"
+                cardInfo={''}
+              />
+              <ReviewCard
+                isEditable={isEditable}
+                header="Full Name"
+                icon={"https://unispaces.sgp1.digitaloceanspaces.com/vts-campaign/1685870836493.svg"}
+                iconSize="w-10"
+                cardInfo={localStorageData.fullName}
+              />
+              <ReviewCard
+                isEditable={isEditable}
+                header="Email Address"
+                icon={"https://unispaces.sgp1.digitaloceanspaces.com/vts-campaign/1685870227501.svg"}
+                iconSize="w-10"
+                className="!lowercase"
+                cardInfo={localStorageData.email}
+              />
+              <ReviewCard
+                isEditable={isEditable}
+                header="Phone Number"
+                icon={"https://unispaces.sgp1.digitaloceanspaces.com/vts-campaign/1685870186004.svg"}
+                iconSize="w-10"
+                cardInfo={localStorageData.phoneNumber}
+              />
+              <ReviewCard
+                isEditable={isEditable}
+                header="Your Last Academic Qualification"
+                icon={localStorageData.academicQualification.imgLink}
+                iconSize="w-10"
+                cardInfo={localStorageData.academicQualification.course}
+              />
+              <ReviewCard
+                isEditable={isEditable}
+                header="Major"
+                icon={localStorageData.academicQualification.imgLink}
+                iconSize="w-10"
+                cardInfo={localStorageData.subjectGroup}
+              />
+              <ReviewCard
+                isEditable={isEditable}
+                header="Result"
+                icon="/assets/gpa.png"
+                iconSize="w-10"
+                cardInfo={localStorageData.results}
+              />
+              <ReviewCard
+                isEditable={isEditable}
+                header="Passing Year"
+                icon="https://unispaces.sgp1.digitaloceanspaces.com/vts-campaign/1685870885148.svg"
+                iconSize="w-10"
+                cardInfo={localStorageData.passingYear}
+              />
+              <ReviewCard
+                isEditable={isEditable}
+                header="Which subject do you want to pursue for your Bachelor/Masters? "
+                icon="https://unispaces.sgp1.digitaloceanspaces.com/vts-campaign/1685870885148.svg"
+                iconSize="w-10"
+                cardInfo={localStorageData.pursueSubject}
+              />
+              <ReviewCard
+                isEditable={isEditable}
+                header="How would you prefer to be contacted?"
+                icon={localStorageData.beConnected.imageLink}
+                iconSize="w-10"
+                cardInfo={localStorageData.beConnected.cardInfo}
+              />
+              <ReviewCard
+                isEditable={isEditable}
+                header="Additional Remarks"
+                icon="/assets/remarks.png"
+                iconSize="w-10"
+                cardInfo={localStorageData.additionRemark
+                }
+              />
             </div>
             {/* buttons */}
             <div className="flex justify-center gap-6 mt-28">

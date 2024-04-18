@@ -3,7 +3,13 @@ import React, { useEffect, useState } from "react";
 import FormHeader from "./FormHeader";
 import CourseName from "./CourseName";
 
-const AcademicQualification = ({ nextStep, prevStep, returnToLang }) => {
+const AcademicQualification = ({
+  nextStep,
+  prevStep,
+  returnToLang,
+  formData,
+  setFormData,
+}) => {
   const courses = [
     {
       id: "1",
@@ -55,14 +61,17 @@ const AcademicQualification = ({ nextStep, prevStep, returnToLang }) => {
   const handleCardClick = (cardId) => {
     setSelectedCardId(cardId === selectedCardId ? null : cardId);
     if (courses[cardId - 1]?.id === cardId) {
-      setSelectedCardData([courses[cardId - 1]]);
+      setSelectedCardData(courses[cardId - 1]);
     }
   };
 
   useEffect(() => {
     if (selectedCardId) {
-      console.log("Selected Card Data:", selectedCardData); // that will pass data in api or local storage
-      nextStep()
+      setFormData({
+        ...formData,
+        academicQualification: selectedCardData,
+      })
+      nextStep();
     }
   }, [selectedCardData]);
 

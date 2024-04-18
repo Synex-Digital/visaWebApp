@@ -3,7 +3,13 @@ import FormHeader from "./FormHeader";
 import CheckCard from "./CheckCard";
 import ContinueBtn from "./ContinueBtn";
 
-const BeConnected = ({ nextStep, prevStep, returnToLang }) => {
+const BeConnected = ({
+  nextStep,
+  prevStep,
+  returnToLang,
+  formData,
+  setFormData,
+}) => {
   const socialInfo = [
     {
       id: 1,
@@ -31,13 +37,13 @@ const BeConnected = ({ nextStep, prevStep, returnToLang }) => {
   const handleCardClick = (cardId) => {
     setSelectedCardId(cardId === selectedCardId ? null : cardId);
     if (socialInfo[cardId - 1]?.id === cardId) {
-      setSelectedCardData([socialInfo[cardId - 1]]);
+      setSelectedCardData(socialInfo[cardId - 1]);
     }
   };
 
   const handleSubmit = () => {
-    console.log(selectedCardData);
-    nextStep()
+    setFormData({ ...formData, beConnected: selectedCardData });
+    nextStep();
   };
   return (
     <>

@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import FormHeader from "./FormHeader";
 import ContinueBtn from "./ContinueBtn";
 
-const PassingYear = ({ nextStep, prevStep, returnToLang }) => {
+const PassingYear = ({
+  nextStep,
+  prevStep,
+  returnToLang,
+  formData,
+  setFormData,
+}) => {
   const currentYear = new Date().getFullYear();
   const startingYear = 2015;
   const lastYear = currentYear - 1;
@@ -15,7 +21,7 @@ const PassingYear = ({ nextStep, prevStep, returnToLang }) => {
   );
 
   const handleSubmit = () => {
-    console.log("selected year => ", selectedYear);
+    setFormData({ ...formData, passingYear: selectedYear });
     nextStep();
   };
   return (

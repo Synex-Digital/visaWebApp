@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import FormHeader from "./FormHeader";
 import SuitableDestinationCard from "./SuitableDestinationCard";
 
-const SuitableDestination = ({ nextStep, returnToLang }) => {
+const SuitableDestination = ({ nextStep, returnToLang, formData, setFormData }) => {
   const information = {
     header: "Assess Your Profile for Suitable Study Destination",
     destinations: [
@@ -55,12 +55,15 @@ const SuitableDestination = ({ nextStep, returnToLang }) => {
     setSelectedCardData("");
     setSelectedCardId(cardId === selectedCardId ? null : cardId);
     if (destinationInfo[cardId - 1]?.id === cardId) {
-      setSelectedCardData([destinationInfo[cardId - 1]]);
+      setSelectedCardData(destinationInfo[cardId - 1]);
     }
   };
   useEffect(() => {
     if (selectedCardId) {
-      console.log("Selected Card Data:", selectedCardData); // that will pass data in api or local storage
+      setFormData({
+        ...formData,
+        suitableStudyDestination: selectedCardData,
+      })
       nextStep()
     }
   }, [selectedCardData]);

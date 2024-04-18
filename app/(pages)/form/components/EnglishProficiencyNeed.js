@@ -2,7 +2,13 @@ import React, { useEffect, useState } from "react";
 import FormHeader from "./FormHeader";
 import CheckCard from "./CheckCard";
 
-const EnglishProficiencyNeed = ({ nextStep, prevStep, returnToLang }) => {
+const EnglishProficiencyNeed = ({
+  nextStep,
+  prevStep,
+  returnToLang,
+  formData,
+  setFormData,
+}) => {
   const checkData = [
     {
       id: 1,
@@ -23,13 +29,16 @@ const EnglishProficiencyNeed = ({ nextStep, prevStep, returnToLang }) => {
   const handleClick = (cardId) => {
     setSelectedCardId(cardId === selectedCardId ? null : cardId);
     if (checkData[cardId - 1]?.id === cardId) {
-      setSelectedCardData([checkData[cardId - 1]]);
+      setSelectedCardData(checkData[cardId - 1]);
     }
   };
 
   useEffect(() => {
     if (selectedCardId) {
-      console.log("Selected Card Data:", selectedCardData); // that will pass data in api or local storage
+      setFormData({
+        ...formData,
+        englishProficiencyNeed: selectedCardData,
+      });
       nextStep();
     }
   }, [selectedCardData]);

@@ -5,17 +5,23 @@ import InputField from "./InputField";
 import ContinueBtn from "./ContinueBtn";
 import { MdLabel } from "react-icons/md";
 
-const FullName = ({ nextStep, prevStep, returnToLang }) => {
+const FullName = ({
+  nextStep,
+  prevStep,
+  returnToLang,
+  formData,
+  setFormData,
+}) => {
   const [fullName, setFullName] = useState();
   const [error, setError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('')
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = () => {
-    if (fullName ) {
+    if (fullName) {
       setErrorMessage("");
       setError(false);
-      console.log(fullName);
-      nextStep()
+      setFormData({ ...formData, fullName });
+      nextStep();
     } else {
       setError(true);
       setErrorMessage("Enter Your Name");
@@ -32,7 +38,7 @@ const FullName = ({ nextStep, prevStep, returnToLang }) => {
             returnToLang={returnToLang}
           />
           <InputField
-          className='!capitalize'
+            className="!capitalize"
             labelIcon={<MdLabel />}
             type="text"
             placeholder="Please enter your name as per your passport"
